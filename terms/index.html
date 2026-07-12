@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<!--
+  Athkar Premium — Terms of Service (bilingual: AR + EN)
+
+  HOW TO PUBLISH (into the EXISTING athkar-privacy repo):
+    1. Open github.com/core2extrem/athkar-privacy
+    2. "Add file" → "Upload files" → drag the whole "terms" FOLDER
+       (this file must land at: terms/index.html)
+    3. Commit. GitHub Pages refreshes in ~1 minute; the page appears at:
+         https://core2extrem.github.io/athkar-privacy/terms/
+
+  HOW TO UPDATE LATER:
+    Edit terms/index.html in the repo (pencil icon, commit) and bump the
+    effective date in BOTH the Arabic and the English sections.
+
+  Source of truth: the app repo's docs/TERMS_OF_SERVICE_{EN,AR}.md
+  (owner-authored 2026-07-11). Styling mirrors the live privacy page.
+-->
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>شروط الاستخدام — أذكاري بريميوم / Terms of Service — Athkar Premium</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg:        #ffffff;
+      --fg:        #0f172a;
+      --muted:     #475569;
+      --accent:    #0d9488;
+      --border:    #e2e8f0;
+      --alt-row:   #f8fafc;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg:      #0f172a;
+        --fg:      #e2e8f0;
+        --muted:   #94a3b8;
+        --accent:  #5eead4;
+        --border:  #1e293b;
+        --alt-row: #111c33;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   "Noto Sans Arabic", "Tahoma", "Helvetica", "Arial",
+                   system-ui, sans-serif;
+      line-height: 1.7;
+      font-size: 16px;
+    }
+    .wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    h1 {
+      font-size: 28px;
+      margin: 0 0 6px;
+      color: var(--accent);
+      line-height: 1.3;
+    }
+    h2 {
+      font-size: 20px;
+      margin: 36px 0 10px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+    }
+    h2:first-of-type { border-top: none; padding-top: 0; }
+    p { margin: 0 0 12px; }
+    ul { margin: 0 0 12px; padding-inline-start: 22px; }
+    li { margin-bottom: 6px; }
+    a { color: var(--accent); text-decoration: underline; }
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+    .toc {
+      background: var(--alt-row);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 18px;
+      margin: 20px 0 32px;
+      font-size: 14px;
+    }
+    .toc a { display: inline-block; margin-inline-end: 14px; }
+    .lang-switch {
+      display: inline-block;
+      background: var(--alt-row);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 4px 16px;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      color: var(--accent);
+      margin-bottom: 28px;
+    }
+    section { scroll-margin-top: 20px; }
+    @media (max-width: 540px) {
+      .wrap { padding: 24px 16px 60px; }
+      h1 { font-size: 24px; }
+      h2 { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ================================================================
+     ARABIC SECTION (default — page opens here)
+     ================================================================ -->
+<section id="ar" dir="rtl" lang="ar">
+  <div class="wrap">
+    <a class="lang-switch" href="#en">English version ↓</a>
+
+    <h1>شروط الاستخدام — أذكاري بريميوم</h1>
+    <p class="meta">تاريخ السريان: ١١ يوليو ٢٠٢٦</p>
+
+    <div class="toc">
+      <strong>المحتويات:</strong>
+      <a href="#ar-what">ما هو التطبيق</a>
+      <a href="#ar-account">لا حاجة لحساب</a>
+      <a href="#ar-purchases">المشتريات</a>
+      <a href="#ar-byok">مفاتيحك (BYOK)</a>
+      <a href="#ar-free2026">«مجاني طوال 2026»</a>
+      <a href="#ar-ai">محتوى الذكاء الاصطناعي</a>
+      <a href="#ar-prayer">المواقيت والقبلة</a>
+      <a href="#ar-use">الاستخدام المقبول</a>
+      <a href="#ar-ip">الملكية الفكرية</a>
+      <a href="#ar-liability">إخلاء المسؤولية</a>
+      <a href="#ar-changes">التعديلات</a>
+      <a href="#ar-contact">التواصل</a>
+    </div>
+
+    <p>
+      مرحباً بك في تطبيق <strong>أذكاري بريميوم</strong> («التطبيق»).
+      بتنزيلك التطبيق أو استخدامك له فأنت توافق على هذه الشروط. نرجو
+      قراءتها — فهي قصيرة وصريحة.
+    </p>
+
+    <h2 id="ar-what">١. ما هو التطبيق</h2>
+    <p>
+      أذكاري بريميوم رفيقٌ إسلامي: عدّاد أذكار وتسبيح، مواقيت الصلاة،
+      اتجاه القبلة، تقويم إسلامي، ومساعد ذكاء اصطناعي اختياري. يقدَّم
+      التطبيق من المطوِّر المذكور في صفحته على Google Play («نحن»).
+    </p>
+
+    <h2 id="ar-account">٢. لا حاجة لحساب</h2>
+    <p>
+      لا يتطلب التطبيق إنشاء حساب. بياناتك (العدّات، الإنجازات،
+      الإعدادات، سجل المحادثة) تبقى على جهازك. النسخ الاحتياطي الاختياري
+      عبر Google يشمل <strong>سجل المحادثة فقط</strong>. إذا حذفت التطبيق
+      حُذفت البيانات المخزّنة على الجهاز معه.
+    </p>
+
+    <h2 id="ar-purchases">٣. المشتريات</h2>
+    <p>
+      تُباع الميزات المدفوعة كاشتراكات أو مشتريات لمرة واحدة عبر
+      <strong>Google Play</strong>. الفوترة والتجديد والإلغاء تديرها
+      Google Play وفق شروط Google. يمكنك الإدارة أو الإلغاء في أي وقت من
+      اشتراكات Play. وتخضع المبالغ المستردَّة لسياسة Google Play.
+    </p>
+
+    <h2 id="ar-byok">٤. مفاتيح الذكاء الاصطناعي الخاصة بك (BYOK)</h2>
+    <p>
+      يعمل المساعد الذكي <strong>بمفاتيح API الخاصة بك</strong> (مثل
+      OpenAI وAnthropic وxAI وDeepSeek وGoogle):
+    </p>
+    <ul>
+      <li>تُخزَّن مفاتيحك <strong>على جهازك</strong> وتُستخدم فقط
+          للاتصال بالمزوِّد الذي اخترته.</li>
+      <li>الاستهلاك <strong>يفوتره ذلك المزوِّد عليك مباشرة</strong> وفق
+          شروطه وأسعاره. لسنا طرفاً في تلك العلاقة، ولا نتحمّل مسؤولية
+          رسوم المزوِّد أو حصصه أو انقطاعاته أو تغيّر سياساته.</li>
+      <li>حافظ على سرية مفاتيحك؛ ويمكنك حذفها من التطبيق في أي وقت.</li>
+    </ul>
+
+    <h2 id="ar-free2026">٥. الميزات الموسومة «مجاني طوال 2026»</h2>
+    <p>
+      بعض الميزات (مثل البحث العميق المزدوج Dual-Fusion) موسومة بأنها
+      <strong>مجانية طوال 2026</strong>، ونعتزم نقلها لاحقاً إلى نظام
+      نقاط (Credits). قد تتغيّر أسعار الميزات المدفوعة المستقبلية
+      وتوافرها؛ وما سبق أن اشتريته يبقى خاضعاً لقواعد Google Play.
+    </p>
+
+    <h2 id="ar-ai">٦. محتوى الذكاء الاصطناعي — مهم</h2>
+    <p>
+      الإجابات والتقارير والمستندات التي ينتجها المساعد تولّدها نماذج
+      ذكاء اصطناعي تابعة لجهات خارجية، وقد تكون <strong>خاطئة أو ناقصة
+      أو غير محدَّثة</strong>، وهي <strong>ليست</strong> فتوى شرعية ولا
+      استشارة قانونية أو طبية أو مالية. تحقَّق من الأمور المهمة لدى أهل
+      الاختصاص.
+    </p>
+
+    <h2 id="ar-prayer">٧. مواقيت الصلاة والقبلة</h2>
+    <p>
+      مواقيت الصلاة واتجاه القبلة والبيانات الفلكية <strong>حسابات
+      تقديرية</strong>. تختلف طرق الحساب وقد تتفاوت دقة حساسات الجهاز.
+      للتوقيت المرتبط بالعبادة، تحقَّق من مسجدك أو الجهة المحلية
+      المعتمدة.
+    </p>
+
+    <h2 id="ar-use">٨. الاستخدام المقبول</h2>
+    <p>
+      لا تسئ استخدام التطبيق: لا استخدام مخالفاً للقانون، ولا محاولات
+      لاختراقه أو إعادة بيعه أو انتحال صفته، ولا استخدام ميزات الذكاء
+      الاصطناعي لإنتاج محتوى ضار أو غير مشروع. كما تطبِّق جهاتُ الذكاء
+      الاصطناعي الخارجية سياساتِ استخدامها الخاصة على الطلبات التي تتم
+      بمفاتيحك.
+    </p>
+
+    <h2 id="ar-ip">٩. الملكية الفكرية</h2>
+    <p>
+      يبقى التطبيق وتصاميمه ومحتواه (باستثناء بياناتك ومخرجات الذكاء
+      الاصطناعي المولَّدة لك) ملكاً لنا. تحصل على ترخيص شخصي غير قابل
+      للنقل لاستخدام التطبيق على أجهزتك.
+    </p>
+
+    <h2 id="ar-liability">١٠. إخلاء المسؤولية</h2>
+    <p>
+      يقدَّم التطبيق <strong>«كما هو»</strong>. وإلى الحد الأقصى الذي
+      يسمح به القانون، نُخلي مسؤوليتنا عن الضمانات وعن الأضرار غير
+      المباشرة أو التبعية، وعن فوات الصلوات أو المواقيت، وعن تكاليف
+      المزوِّدين، وعن أي خسائر ناتجة عن محتوى مولَّد بالذكاء الاصطناعي.
+      ولا شيء في هذه الشروط ينتقص من الحقوق التي يمنحك إياها القانون.
+    </p>
+
+    <h2 id="ar-changes">١١. التعديلات</h2>
+    <p>
+      قد نحدِّث هذه الشروط؛ وعندها يتغيّر تاريخ السريان أعلاه، ويُعد
+      استمرارك في الاستخدام قبولاً بها. وسيُشار إلى التغييرات الجوهرية
+      داخل التطبيق أو في صفحته بالمتجر.
+    </p>
+
+    <h2 id="ar-contact">١٢. التواصل</h2>
+    <p>
+      للأسئلة والملاحظات:
+      <br>
+      <a href="mailto:instrumentation.engineering@gmail.com">instrumentation.engineering@gmail.com</a>
+    </p>
+
+    <p>
+      راجع أيضاً
+      <a href="https://core2extrem.github.io/athkar-privacy/">سياسة الخصوصية</a>.
+    </p>
+  </div>
+</section>
+
+<!-- ================================================================
+     ENGLISH SECTION
+     ================================================================ -->
+<section id="en" dir="ltr" lang="en">
+  <div class="wrap">
+    <a class="lang-switch" href="#ar">النسخة العربية ↑</a>
+
+    <h1>Terms of Service — Athkar Premium</h1>
+    <p class="meta">Effective date: July 11, 2026</p>
+
+    <div class="toc">
+      <strong>Contents:</strong>
+      <a href="#en-what">What the App is</a>
+      <a href="#en-account">No account needed</a>
+      <a href="#en-purchases">Purchases</a>
+      <a href="#en-byok">Your keys (BYOK)</a>
+      <a href="#en-free2026">"Free through 2026"</a>
+      <a href="#en-ai">AI content</a>
+      <a href="#en-prayer">Prayer times &amp; qibla</a>
+      <a href="#en-use">Acceptable use</a>
+      <a href="#en-ip">Intellectual property</a>
+      <a href="#en-liability">Disclaimers &amp; liability</a>
+      <a href="#en-changes">Changes</a>
+      <a href="#en-contact">Contact</a>
+    </div>
+
+    <p>
+      Welcome to <strong>Athkar Premium</strong> ("the App"). By
+      downloading or using the App you agree to these terms. Please read
+      them — they're short and honest.
+    </p>
+
+    <h2 id="en-what">1. What the App is</h2>
+    <p>
+      Athkar Premium is an Islamic companion app: athkar and dhikr
+      counting, prayer times, qibla direction, an Islamic calendar, and
+      an optional AI assistant. The App is provided by the developer
+      listed on its Google Play page ("we", "us").
+    </p>
+
+    <h2 id="en-account">2. No account needed</h2>
+    <p>
+      The App does not require an account. Your data (counts, streaks,
+      settings, chat history) lives on your device. An optional Google
+      backup covers <strong>chat history only</strong>. If you delete
+      the App, on-device data is removed with it.
+    </p>
+
+    <h2 id="en-purchases">3. Purchases</h2>
+    <p>
+      Premium features are sold as subscriptions or one-time purchases
+      through <strong>Google Play</strong>. Billing, renewal, and
+      cancellation are handled by Google Play under Google's terms.
+      Manage or cancel anytime in your Play subscriptions. Refunds
+      follow Google Play policy.
+    </p>
+
+    <h2 id="en-byok">4. Bring-your-own-key AI (BYOK)</h2>
+    <p>
+      The AI assistant runs on <strong>your own API keys</strong> (for
+      example OpenAI, Anthropic, xAI, DeepSeek, Google):
+    </p>
+    <ul>
+      <li>Your keys are stored <strong>on your device</strong> and used
+          only to call the provider you chose.</li>
+      <li>Usage is billed <strong>by that provider to you</strong>,
+          under that provider's own terms and prices. We are not a party
+          to that relationship and are not responsible for provider
+          charges, quotas, outages, or policy changes.</li>
+      <li>Keep your keys safe; you can remove them in the App at any
+          time.</li>
+    </ul>
+
+    <h2 id="en-free2026">5. Features marked "Free through 2026"</h2>
+    <p>
+      Some features (for example Dual-Fusion Deep Search) are marked
+      <strong>free through 2026</strong>. We intend to move them to a
+      credits system later. Prices and availability of future paid
+      features may change; anything you already purchased stays governed
+      by Google Play's rules.
+    </p>
+
+    <h2 id="en-ai">6. AI content — important</h2>
+    <p>
+      Answers, reports, and documents produced by the AI assistant are
+      generated by third-party AI models. They <strong>may be wrong,
+      incomplete, or outdated</strong>, and they are <strong>not</strong>
+      religious rulings (fatwa), legal, medical, or financial advice.
+      Verify important matters with qualified people.
+    </p>
+
+    <h2 id="en-prayer">7. Prayer times &amp; qibla</h2>
+    <p>
+      Prayer times, qibla direction, and astronomical data are
+      <strong>computed estimates</strong>. Calculation methods vary and
+      device sensors can be imprecise. For worship-critical timing,
+      verify with your local mosque or authority.
+    </p>
+
+    <h2 id="en-use">8. Acceptable use</h2>
+    <p>
+      Don't misuse the App: no unlawful use, no attempts to break,
+      resell, or misrepresent it, and no use of the AI features to
+      produce harmful or unlawful content. Third-party AI providers also
+      apply their own usage policies to calls made with your keys.
+    </p>
+
+    <h2 id="en-ip">9. Intellectual property</h2>
+    <p>
+      The App, its designs, and its content (excluding your own data and
+      AI outputs generated for you) remain ours. You get a personal,
+      non-transferable license to use the App on your devices.
+    </p>
+
+    <h2 id="en-liability">10. Disclaimers &amp; liability</h2>
+    <p>
+      The App is provided <strong>"as is"</strong>. To the maximum
+      extent permitted by law, we disclaim warranties and are not liable
+      for indirect or consequential damages, missed prayers or timings,
+      provider costs, or losses arising from AI-generated content.
+      Nothing in these terms limits rights that applicable law gives
+      you.
+    </p>
+
+    <h2 id="en-changes">11. Changes</h2>
+    <p>
+      We may update these terms; the effective date above will change
+      and continued use means acceptance. Material changes will be noted
+      in the App or its store listing.
+    </p>
+
+    <h2 id="en-contact">12. Contact</h2>
+    <p>
+      Questions or concerns:
+      <br>
+      <a href="mailto:instrumentation.engineering@gmail.com">instrumentation.engineering@gmail.com</a>
+    </p>
+
+    <p>
+      See also our
+      <a href="https://core2extrem.github.io/athkar-privacy/">Privacy Policy</a>.
+    </p>
+  </div>
+</section>
+
+</body>
+</html>

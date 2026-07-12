@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <!--
-  Athkar Premium — Terms of Service (bilingual: AR + EN)
+  Athkar Daily — Privacy Policy (bilingual: AR + EN)
 
-  HOW TO PUBLISH (into the EXISTING athkar-privacy repo):
-    1. Open github.com/core2extrem/athkar-privacy
-    2. "Add file" → "Upload files" → drag the whole "terms" FOLDER
-       (this file must land at: terms/index.html)
-    3. Commit. GitHub Pages refreshes in ~1 minute; the page appears at:
-         https://core2extrem.github.io/athkar-privacy/terms/
+  HOW TO PUBLISH (one-time setup):
+    1. Create a new PUBLIC repo on github.com — suggested name:
+       "athkar-privacy" (any name is fine).
+    2. Upload this file to that repo, renamed to "index.html".
+    3. In the repo: Settings → Pages → Source: "Deploy from a
+       branch" → Branch: "main" / Folder: "/ (root)" → Save.
+    4. Wait ~1 minute. GitHub shows you the live URL, of the form:
+         https://<your-github-username>.github.io/athkar-privacy/
+    5. Paste that URL into Play Console:
+         All apps → Athkar Daily → App content → Privacy policy.
 
   HOW TO UPDATE LATER:
-    Edit terms/index.html in the repo (pencil icon, commit) and bump the
-    effective date in BOTH the Arabic and the English sections.
+    Just edit this file in the GitHub repo (pencil icon, commit).
+    The Pages site refreshes automatically in a minute or two.
+    Also bump the "Last updated" date in BOTH the Arabic and the
+    English sections.
 
-  Source of truth: the app repo's docs/TERMS_OF_SERVICE_{EN,AR}.md
-  (owner-authored 2026-07-11). Styling mirrors the live privacy page.
+  PLACEHOLDERS TO FILL IN BEFORE PUBLISHING:
+    Saud AlWahbi    → the developer / publisher name shown on
+                          the Play Store (probably "Athkar Daily"
+                          or the human name on the Play Console
+                          account).
+    ismartest@outlook.com     → an email address users can reach you at.
+                          Required by both Play Store and App Store.
+    20 May 2026    → the date you publish the policy, e.g.
+                          "20 May 2026".
 -->
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>شروط الاستخدام — أذكاري بريميوم / Terms of Service — Athkar Premium</title>
+  <title>سياسة الخصوصية — الأذكار اليومية / Privacy Policy — Athkar Daily</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -88,6 +101,23 @@
       font-size: 14px;
     }
     .toc a { display: inline-block; margin-inline-end: 14px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 8px 0 20px;
+      font-size: 14.5px;
+    }
+    th, td {
+      text-align: start;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    th {
+      background: var(--alt-row);
+      font-weight: 700;
+    }
+    tr:nth-child(even) td { background: var(--alt-row); }
     .lang-switch {
       display: inline-block;
       background: var(--alt-row);
@@ -105,6 +135,8 @@
       .wrap { padding: 24px 16px 60px; }
       h1 { font-size: 24px; }
       h2 { font-size: 18px; }
+      table, th, td { font-size: 13.5px; }
+      th, td { padding: 8px 10px; }
     }
   </style>
 </head>
@@ -117,135 +149,166 @@
   <div class="wrap">
     <a class="lang-switch" href="#en">English version ↓</a>
 
-    <h1>شروط الاستخدام — أذكاري بريميوم</h1>
-    <p class="meta">تاريخ السريان: ١١ يوليو ٢٠٢٦</p>
+    <h1>سياسة الخصوصية — الأذكار اليومية</h1>
+    <p class="meta">آخر تحديث: 20 May 2026</p>
 
     <div class="toc">
       <strong>المحتويات:</strong>
-      <a href="#ar-what">ما هو التطبيق</a>
-      <a href="#ar-account">لا حاجة لحساب</a>
-      <a href="#ar-purchases">المشتريات</a>
-      <a href="#ar-byok">مفاتيحك (BYOK)</a>
-      <a href="#ar-free2026">«مجاني طوال 2026»</a>
-      <a href="#ar-ai">محتوى الذكاء الاصطناعي</a>
-      <a href="#ar-prayer">المواقيت والقبلة</a>
-      <a href="#ar-use">الاستخدام المقبول</a>
-      <a href="#ar-ip">الملكية الفكرية</a>
-      <a href="#ar-liability">إخلاء المسؤولية</a>
-      <a href="#ar-changes">التعديلات</a>
+      <a href="#ar-summary">الخلاصة</a>
+      <a href="#ar-local">بياناتك على هاتفك</a>
+      <a href="#ar-third-parties">الخدمات الخارجية</a>
+      <a href="#ar-purchases">المشتريات والاشتراكات</a>
+      <a href="#ar-children">خصوصية الأطفال</a>
+      <a href="#ar-rights">حقوقك</a>
+      <a href="#ar-changes">تحديثات السياسة</a>
       <a href="#ar-contact">التواصل</a>
     </div>
 
     <p>
-      مرحباً بك في تطبيق <strong>أذكاري بريميوم</strong> («التطبيق»).
-      بتنزيلك التطبيق أو استخدامك له فأنت توافق على هذه الشروط. نرجو
-      قراءتها — فهي قصيرة وصريحة.
+      مرحباً بك في تطبيق <strong>الأذكار اليومية</strong>. تشرح هذه السياسة
+      كيف يتعامل التطبيق مع بياناتك. التطبيق مُصمَّم ليعمل بأقل قدر ممكن
+      من جمع البيانات: لا يوجد لدينا خادم خاص، ولا نطلب اسمك أو بريدك
+      الإلكتروني، ولا يحتوي التطبيق على أي إعلانات أو أدوات تتبع.
     </p>
 
-    <h2 id="ar-what">١. ما هو التطبيق</h2>
+    <h2 id="ar-summary">الخلاصة في سطر</h2>
     <p>
-      أذكاري بريميوم رفيقٌ إسلامي: عدّاد أذكار وتسبيح، مواقيت الصلاة،
-      اتجاه القبلة، تقويم إسلامي، ومساعد ذكاء اصطناعي اختياري. يقدَّم
-      التطبيق من المطوِّر المذكور في صفحته على Google Play («نحن»).
+      تُحفظ جميع إعداداتك ومشاركتك على هاتفك فقط. التطبيق يستدعي عدداً
+      صغيراً من الخدمات العامة لجلب أوقات الصلاة وأقرب المساجد واسم
+      المدينة، وهذه السياسة تذكر كلًّا منها بالتفصيل.
     </p>
 
-    <h2 id="ar-account">٢. لا حاجة لحساب</h2>
+    <h2 id="ar-local">البيانات المحفوظة على هاتفك فقط</h2>
     <p>
-      لا يتطلب التطبيق إنشاء حساب. بياناتك (العدّات، الإنجازات،
-      الإعدادات، سجل المحادثة) تبقى على جهازك. النسخ الاحتياطي الاختياري
-      عبر Google يشمل <strong>سجل المحادثة فقط</strong>. إذا حذفت التطبيق
-      حُذفت البيانات المخزّنة على الجهاز معه.
-    </p>
-
-    <h2 id="ar-purchases">٣. المشتريات</h2>
-    <p>
-      تُباع الميزات المدفوعة كاشتراكات أو مشتريات لمرة واحدة عبر
-      <strong>Google Play</strong>. الفوترة والتجديد والإلغاء تديرها
-      Google Play وفق شروط Google. يمكنك الإدارة أو الإلغاء في أي وقت من
-      اشتراكات Play. وتخضع المبالغ المستردَّة لسياسة Google Play.
-    </p>
-
-    <h2 id="ar-byok">٤. مفاتيح الذكاء الاصطناعي الخاصة بك (BYOK)</h2>
-    <p>
-      يعمل المساعد الذكي <strong>بمفاتيح API الخاصة بك</strong> (مثل
-      OpenAI وAnthropic وxAI وDeepSeek وGoogle):
+      تُخزَّن البيانات التالية محلياً على جهازك (داخل ذاكرة التطبيق)،
+      ولا تصلنا أبداً ولا تُرسَل إلى أي خادم نملكه:
     </p>
     <ul>
-      <li>تُخزَّن مفاتيحك <strong>على جهازك</strong> وتُستخدم فقط
-          للاتصال بالمزوِّد الذي اخترته.</li>
-      <li>الاستهلاك <strong>يفوتره ذلك المزوِّد عليك مباشرة</strong> وفق
-          شروطه وأسعاره. لسنا طرفاً في تلك العلاقة، ولا نتحمّل مسؤولية
-          رسوم المزوِّد أو حصصه أو انقطاعاته أو تغيّر سياساته.</li>
-      <li>حافظ على سرية مفاتيحك؛ ويمكنك حذفها من التطبيق في أي وقت.</li>
+      <li>اختياراتك للسمة والخط واللغة</li>
+      <li>تقدّم العدّاد والأذكار المحفوظة</li>
+      <li>أوقات الصلاة المحفوظة مؤقتاً</li>
+      <li>قوائم المساجد القريبة المحفوظة مؤقتاً</li>
+      <li>حالة الاشتراك / الشراء (مُدارة عبر RevenueCat)</li>
+    </ul>
+    <p>
+      عند حذف التطبيق أو مسح بيانات التخزين، تُمحى هذه البيانات بالكامل.
+    </p>
+
+    <h2 id="ar-third-parties">الخدمات الخارجية التي يستدعيها التطبيق</h2>
+    <p>
+      لتقديم ميزات مثل أوقات الصلاة وأقرب مسجد، يتواصل التطبيق مع الخدمات
+      التالية. عندما يُرسل الإحداثيات (خط الطول وخط العرض)، فإن ذلك يحدث
+      بناءً على الميزة التي تستخدمها، وليس تتبعاً مستمراً لموقعك:
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>الخدمة</th>
+          <th>ما يُرسَل</th>
+          <th>الغرض</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>AlAdhan</strong><br>api.aladhan.com</td>
+          <td>الإحداثيات + طريقة الحساب المختارة</td>
+          <td>جلب أوقات الصلاة لموقعك</td>
+        </tr>
+        <tr>
+          <td><strong>BigDataCloud</strong><br>api.bigdatacloud.net</td>
+          <td>الإحداثيات</td>
+          <td>تحويل الإحداثيات إلى اسم مدينة/دولة لعرضها في زر الموقع</td>
+        </tr>
+        <tr>
+          <td><strong>TomTom Search</strong><br>api.tomtom.com</td>
+          <td>الإحداثيات + نطاق البحث</td>
+          <td>المصدر الأساسي للبحث عن المساجد القريبة (يوفر أسماء مساجد
+              دقيقة بالعربية والإنجليزية)</td>
+        </tr>
+        <tr>
+          <td><strong>OpenStreetMap Overpass</strong><br>overpass-api.de</td>
+          <td>الإحداثيات + نطاق البحث</td>
+          <td>مصدر ثانوي للبحث عن المساجد عند عدم توفر نتائج من TomTom</td>
+        </tr>
+        <tr>
+          <td><strong>OpenStreetMap Nominatim</strong><br>nominatim.openstreetmap.org</td>
+          <td>الإحداثيات</td>
+          <td>الحصول على اسم الشارع أو الحي كدليل تقريبي للمساجد التي لا
+              يحمل سجلها على OpenStreetMap اسماً</td>
+        </tr>
+        <tr>
+          <td><strong>Masjid Near Me</strong><br>api.masjidnear.me</td>
+          <td>الإحداثيات + نطاق البحث</td>
+          <td>مصدر احتياطي ثالث للبحث عن المساجد عند عدم توفر نتائج من
+              TomTom ومن OpenStreetMap</td>
+        </tr>
+        <tr>
+          <td><strong>Google Maps</strong><br>google.com/maps</td>
+          <td>إحداثيات الوجهة + اسم المسجد</td>
+          <td>فتح مسار قيادة داخل التطبيق عند الضغط على مسجد</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      كلّ خدمة من هذه الخدمات تخضع لسياسة الخصوصية الخاصة بها:
+    </p>
+    <ul>
+      <li>AlAdhan: <a href="https://aladhan.com/privacy">aladhan.com/privacy</a></li>
+      <li>BigDataCloud: <a href="https://www.bigdatacloud.com/privacy-and-cookie-policy">bigdatacloud.com/privacy-and-cookie-policy</a></li>
+      <li>TomTom: <a href="https://www.tomtom.com/privacy/">tomtom.com/privacy</a></li>
+      <li>OpenStreetMap Foundation (Overpass + Nominatim): <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy">osmfoundation.org Privacy Policy</a></li>
+      <li>Masjid Near Me: <a href="https://masjidnear.me/">masjidnear.me</a></li>
+      <li>Google Maps: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
     </ul>
 
-    <h2 id="ar-free2026">٥. الميزات الموسومة «مجاني طوال 2026»</h2>
+    <h2 id="ar-purchases">المشتريات والاشتراكات</h2>
     <p>
-      بعض الميزات (مثل البحث العميق المزدوج Dual-Fusion) موسومة بأنها
-      <strong>مجانية طوال 2026</strong>، ونعتزم نقلها لاحقاً إلى نظام
-      نقاط (Credits). قد تتغيّر أسعار الميزات المدفوعة المستقبلية
-      وتوافرها؛ وما سبق أن اشتريته يبقى خاضعاً لقواعد Google Play.
+      تُدار جميع عمليات الشراء والاشتراك عبر <strong>Google Play
+      Billing</strong>، ويستخدم التطبيق <strong>RevenueCat</strong>
+      للتحقق من حالة الاشتراك وإدارة الميزات المدفوعة. عند الشراء،
+      تُشارَك حالة الاشتراك ومُعرّفك المجهول من متجر Google Play مع
+      هاتين الخدمتين فقط — لا يصلنا رقم بطاقتك الائتمانية ولا أي معلومات
+      دفع أخرى.
+    </p>
+    <ul>
+      <li>Google Play: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
+      <li>RevenueCat: <a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a></li>
+    </ul>
+
+    <h2 id="ar-children">خصوصية الأطفال</h2>
+    <p>
+      التطبيق مُصنَّف لجميع الأعمار ولا يجمع عمداً أي بيانات شخصية من
+      الأطفال دون سن 13 عاماً. لا يحتوي التطبيق على أي إعلانات.
     </p>
 
-    <h2 id="ar-ai">٦. محتوى الذكاء الاصطناعي — مهم</h2>
+    <h2 id="ar-rights">حقوقك والتحكم ببياناتك</h2>
     <p>
-      الإجابات والتقارير والمستندات التي ينتجها المساعد تولّدها نماذج
-      ذكاء اصطناعي تابعة لجهات خارجية، وقد تكون <strong>خاطئة أو ناقصة
-      أو غير محدَّثة</strong>، وهي <strong>ليست</strong> فتوى شرعية ولا
-      استشارة قانونية أو طبية أو مالية. تحقَّق من الأمور المهمة لدى أهل
-      الاختصاص.
+      لأن جميع إعداداتك تُحفظ على هاتفك فقط، فأنت تتحكم بها كاملاً:
+    </p>
+    <ul>
+      <li>لمسح بيانات التطبيق: الإعدادات → التطبيقات → الأذكار اليومية
+          → التخزين → مسح البيانات.</li>
+      <li>لإيقاف مشاركة الموقع نهائياً: الإعدادات → التطبيقات → الأذكار
+          اليومية → الأذونات → الموقع.</li>
+      <li>لحذف التطبيق وكل بياناته: ببساطة قم بإلغاء تثبيت التطبيق.</li>
+    </ul>
+
+    <h2 id="ar-changes">تحديثات هذه السياسة</h2>
+    <p>
+      قد نُحدِّث هذه السياسة من حين لآخر عند إضافة ميزات جديدة أو تغيير
+      الخدمات التي يستدعيها التطبيق. سيظهر التحديث على هذه الصفحة، مع
+      تاريخ آخر تعديل في أعلى الصفحة.
     </p>
 
-    <h2 id="ar-prayer">٧. مواقيت الصلاة والقبلة</h2>
+    <h2 id="ar-contact">التواصل معنا</h2>
     <p>
-      مواقيت الصلاة واتجاه القبلة والبيانات الفلكية <strong>حسابات
-      تقديرية</strong>. تختلف طرق الحساب وقد تتفاوت دقة حساسات الجهاز.
-      للتوقيت المرتبط بالعبادة، تحقَّق من مسجدك أو الجهة المحلية
-      المعتمدة.
-    </p>
-
-    <h2 id="ar-use">٨. الاستخدام المقبول</h2>
-    <p>
-      لا تسئ استخدام التطبيق: لا استخدام مخالفاً للقانون، ولا محاولات
-      لاختراقه أو إعادة بيعه أو انتحال صفته، ولا استخدام ميزات الذكاء
-      الاصطناعي لإنتاج محتوى ضار أو غير مشروع. كما تطبِّق جهاتُ الذكاء
-      الاصطناعي الخارجية سياساتِ استخدامها الخاصة على الطلبات التي تتم
-      بمفاتيحك.
-    </p>
-
-    <h2 id="ar-ip">٩. الملكية الفكرية</h2>
-    <p>
-      يبقى التطبيق وتصاميمه ومحتواه (باستثناء بياناتك ومخرجات الذكاء
-      الاصطناعي المولَّدة لك) ملكاً لنا. تحصل على ترخيص شخصي غير قابل
-      للنقل لاستخدام التطبيق على أجهزتك.
-    </p>
-
-    <h2 id="ar-liability">١٠. إخلاء المسؤولية</h2>
-    <p>
-      يقدَّم التطبيق <strong>«كما هو»</strong>. وإلى الحد الأقصى الذي
-      يسمح به القانون، نُخلي مسؤوليتنا عن الضمانات وعن الأضرار غير
-      المباشرة أو التبعية، وعن فوات الصلوات أو المواقيت، وعن تكاليف
-      المزوِّدين، وعن أي خسائر ناتجة عن محتوى مولَّد بالذكاء الاصطناعي.
-      ولا شيء في هذه الشروط ينتقص من الحقوق التي يمنحك إياها القانون.
-    </p>
-
-    <h2 id="ar-changes">١١. التعديلات</h2>
-    <p>
-      قد نحدِّث هذه الشروط؛ وعندها يتغيّر تاريخ السريان أعلاه، ويُعد
-      استمرارك في الاستخدام قبولاً بها. وسيُشار إلى التغييرات الجوهرية
-      داخل التطبيق أو في صفحته بالمتجر.
-    </p>
-
-    <h2 id="ar-contact">١٢. التواصل</h2>
-    <p>
-      للأسئلة والملاحظات:
+      للأسئلة أو الملاحظات أو طلبات الخصوصية، تواصل مع:
       <br>
-      <a href="mailto:instrumentation.engineering@gmail.com">instrumentation.engineering@gmail.com</a>
-    </p>
-
-    <p>
-      راجع أيضاً
-      <a href="https://core2extrem.github.io/athkar-privacy/">سياسة الخصوصية</a>.
+      <strong>Saud AlWahbi</strong>
+      <br>
+      <a href="mailto:ismartest@outlook.com">ismartest@outlook.com</a>
     </p>
   </div>
 </section>
@@ -257,140 +320,176 @@
   <div class="wrap">
     <a class="lang-switch" href="#ar">النسخة العربية ↑</a>
 
-    <h1>Terms of Service — Athkar Premium</h1>
-    <p class="meta">Effective date: July 11, 2026</p>
+    <h1>Privacy Policy — Athkar Daily</h1>
+    <p class="meta">Last updated: 20 May 2026</p>
 
     <div class="toc">
       <strong>Contents:</strong>
-      <a href="#en-what">What the App is</a>
-      <a href="#en-account">No account needed</a>
-      <a href="#en-purchases">Purchases</a>
-      <a href="#en-byok">Your keys (BYOK)</a>
-      <a href="#en-free2026">"Free through 2026"</a>
-      <a href="#en-ai">AI content</a>
-      <a href="#en-prayer">Prayer times &amp; qibla</a>
-      <a href="#en-use">Acceptable use</a>
-      <a href="#en-ip">Intellectual property</a>
-      <a href="#en-liability">Disclaimers &amp; liability</a>
-      <a href="#en-changes">Changes</a>
+      <a href="#en-summary">Summary</a>
+      <a href="#en-local">Data on your phone</a>
+      <a href="#en-third-parties">Third-party services</a>
+      <a href="#en-purchases">Purchases & subscriptions</a>
+      <a href="#en-children">Children's privacy</a>
+      <a href="#en-rights">Your rights</a>
+      <a href="#en-changes">Policy updates</a>
       <a href="#en-contact">Contact</a>
     </div>
 
     <p>
-      Welcome to <strong>Athkar Premium</strong> ("the App"). By
-      downloading or using the App you agree to these terms. Please read
-      them — they're short and honest.
+      Welcome to <strong>Athkar Daily</strong>. This policy explains how
+      the app handles your data. The app is built to collect as little
+      data as possible: we operate no server of our own, we never ask
+      for your name or email, and the app contains no advertising or
+      analytics trackers.
     </p>
 
-    <h2 id="en-what">1. What the App is</h2>
+    <h2 id="en-summary">One-line summary</h2>
     <p>
-      Athkar Premium is an Islamic companion app: athkar and dhikr
-      counting, prayer times, qibla direction, an Islamic calendar, and
-      an optional AI assistant. The App is provided by the developer
-      listed on its Google Play page ("we", "us").
+      All your settings and progress are kept only on your phone. The
+      app calls a small set of public services to fetch prayer times,
+      nearby mosques, and your city name — every one of them is listed
+      below.
     </p>
 
-    <h2 id="en-account">2. No account needed</h2>
+    <h2 id="en-local">Data kept only on your phone</h2>
     <p>
-      The App does not require an account. Your data (counts, streaks,
-      settings, chat history) lives on your device. An optional Google
-      backup covers <strong>chat history only</strong>. If you delete
-      the App, on-device data is removed with it.
-    </p>
-
-    <h2 id="en-purchases">3. Purchases</h2>
-    <p>
-      Premium features are sold as subscriptions or one-time purchases
-      through <strong>Google Play</strong>. Billing, renewal, and
-      cancellation are handled by Google Play under Google's terms.
-      Manage or cancel anytime in your Play subscriptions. Refunds
-      follow Google Play policy.
-    </p>
-
-    <h2 id="en-byok">4. Bring-your-own-key AI (BYOK)</h2>
-    <p>
-      The AI assistant runs on <strong>your own API keys</strong> (for
-      example OpenAI, Anthropic, xAI, DeepSeek, Google):
+      The following is stored locally on your device (inside the app's
+      private storage) and never reaches us or any server we own:
     </p>
     <ul>
-      <li>Your keys are stored <strong>on your device</strong> and used
-          only to call the provider you chose.</li>
-      <li>Usage is billed <strong>by that provider to you</strong>,
-          under that provider's own terms and prices. We are not a party
-          to that relationship and are not responsible for provider
-          charges, quotas, outages, or policy changes.</li>
-      <li>Keep your keys safe; you can remove them in the App at any
-          time.</li>
+      <li>Your theme, font and language choices</li>
+      <li>Counter progress and the athkar you've completed</li>
+      <li>Cached prayer times</li>
+      <li>Cached nearby-mosque lists</li>
+      <li>Subscription / purchase status (managed via RevenueCat)</li>
+    </ul>
+    <p>
+      Uninstalling the app or clearing its storage removes all of this
+      data.
+    </p>
+
+    <h2 id="en-third-parties">Third-party services the app calls</h2>
+    <p>
+      To provide features like prayer times and Nearest Mosque, the app
+      contacts the services below. Whenever it sends your coordinates,
+      it does so in direct response to the feature you're using — there
+      is no continuous location tracking:
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>What is sent</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>AlAdhan</strong><br>api.aladhan.com</td>
+          <td>Coordinates + chosen calculation method</td>
+          <td>Fetch prayer times for your location</td>
+        </tr>
+        <tr>
+          <td><strong>BigDataCloud</strong><br>api.bigdatacloud.net</td>
+          <td>Coordinates</td>
+          <td>Translate coordinates into a city / country name for the
+              location pill</td>
+        </tr>
+        <tr>
+          <td><strong>TomTom Search</strong><br>api.tomtom.com</td>
+          <td>Coordinates + search radius</td>
+          <td>Primary source for nearby-mosque search (provides accurate
+              mosque names in Arabic and English)</td>
+        </tr>
+        <tr>
+          <td><strong>OpenStreetMap Overpass</strong><br>overpass-api.de</td>
+          <td>Coordinates + search radius</td>
+          <td>Secondary mosque source — used only when TomTom returns no
+              results or is unreachable</td>
+        </tr>
+        <tr>
+          <td><strong>OpenStreetMap Nominatim</strong><br>nominatim.openstreetmap.org</td>
+          <td>Coordinates</td>
+          <td>Get a nearest-road / district name as a hint for mosques
+              that have no name on OpenStreetMap</td>
+        </tr>
+        <tr>
+          <td><strong>Masjid Near Me</strong><br>api.masjidnear.me</td>
+          <td>Coordinates + search radius</td>
+          <td>Third-tier fallback mosque source — used only when both
+              TomTom and OpenStreetMap return no results</td>
+        </tr>
+        <tr>
+          <td><strong>Google Maps</strong><br>google.com/maps</td>
+          <td>Destination coordinates + mosque name</td>
+          <td>Open driving directions inside an in-app browser when you
+              tap a mosque</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      Each service is governed by its own privacy policy:
+    </p>
+    <ul>
+      <li>AlAdhan: <a href="https://aladhan.com/privacy">aladhan.com/privacy</a></li>
+      <li>BigDataCloud: <a href="https://www.bigdatacloud.com/privacy-and-cookie-policy">bigdatacloud.com/privacy-and-cookie-policy</a></li>
+      <li>TomTom: <a href="https://www.tomtom.com/privacy/">tomtom.com/privacy</a></li>
+      <li>OpenStreetMap Foundation (Overpass + Nominatim): <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy">osmfoundation.org Privacy Policy</a></li>
+      <li>Masjid Near Me: <a href="https://masjidnear.me/">masjidnear.me</a></li>
+      <li>Google Maps: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
     </ul>
 
-    <h2 id="en-free2026">5. Features marked "Free through 2026"</h2>
+    <h2 id="en-purchases">Purchases & subscriptions</h2>
     <p>
-      Some features (for example Dual-Fusion Deep Search) are marked
-      <strong>free through 2026</strong>. We intend to move them to a
-      credits system later. Prices and availability of future paid
-      features may change; anything you already purchased stays governed
-      by Google Play's rules.
+      All purchases and subscriptions are processed by <strong>Google
+      Play Billing</strong>, and the app uses <strong>RevenueCat</strong>
+      to verify entitlement and manage premium features. When you
+      purchase, your anonymous Play Store user ID and subscription
+      state are shared with these two services only — we never receive
+      your credit-card number or any other payment information.
+    </p>
+    <ul>
+      <li>Google Play: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
+      <li>RevenueCat: <a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a></li>
+    </ul>
+
+    <h2 id="en-children">Children's privacy</h2>
+    <p>
+      The app is rated for all ages and does not knowingly collect
+      personal data from children under 13. The app contains no
+      advertising.
     </p>
 
-    <h2 id="en-ai">6. AI content — important</h2>
+    <h2 id="en-rights">Your rights and controls</h2>
     <p>
-      Answers, reports, and documents produced by the AI assistant are
-      generated by third-party AI models. They <strong>may be wrong,
-      incomplete, or outdated</strong>, and they are <strong>not</strong>
-      religious rulings (fatwa), legal, medical, or financial advice.
-      Verify important matters with qualified people.
+      Because all your settings stay on your phone, you are in full
+      control:
+    </p>
+    <ul>
+      <li>Clear app data: Settings → Apps → Athkar Daily → Storage →
+          Clear data.</li>
+      <li>Stop sharing location entirely: Settings → Apps → Athkar
+          Daily → Permissions → Location.</li>
+      <li>Delete the app and all of its data: simply uninstall.</li>
+    </ul>
+
+    <h2 id="en-changes">Updates to this policy</h2>
+    <p>
+      We may update this policy from time to time when the app gains
+      new features or the services it talks to change. Updates will
+      appear on this page; the "Last updated" date at the top of the
+      page is your indicator.
     </p>
 
-    <h2 id="en-prayer">7. Prayer times &amp; qibla</h2>
+    <h2 id="en-contact">Contact</h2>
     <p>
-      Prayer times, qibla direction, and astronomical data are
-      <strong>computed estimates</strong>. Calculation methods vary and
-      device sensors can be imprecise. For worship-critical timing,
-      verify with your local mosque or authority.
-    </p>
-
-    <h2 id="en-use">8. Acceptable use</h2>
-    <p>
-      Don't misuse the App: no unlawful use, no attempts to break,
-      resell, or misrepresent it, and no use of the AI features to
-      produce harmful or unlawful content. Third-party AI providers also
-      apply their own usage policies to calls made with your keys.
-    </p>
-
-    <h2 id="en-ip">9. Intellectual property</h2>
-    <p>
-      The App, its designs, and its content (excluding your own data and
-      AI outputs generated for you) remain ours. You get a personal,
-      non-transferable license to use the App on your devices.
-    </p>
-
-    <h2 id="en-liability">10. Disclaimers &amp; liability</h2>
-    <p>
-      The App is provided <strong>"as is"</strong>. To the maximum
-      extent permitted by law, we disclaim warranties and are not liable
-      for indirect or consequential damages, missed prayers or timings,
-      provider costs, or losses arising from AI-generated content.
-      Nothing in these terms limits rights that applicable law gives
-      you.
-    </p>
-
-    <h2 id="en-changes">11. Changes</h2>
-    <p>
-      We may update these terms; the effective date above will change
-      and continued use means acceptance. Material changes will be noted
-      in the App or its store listing.
-    </p>
-
-    <h2 id="en-contact">12. Contact</h2>
-    <p>
-      Questions or concerns:
+      For any privacy questions, concerns, or requests, contact:
       <br>
-      <a href="mailto:instrumentation.engineering@gmail.com">instrumentation.engineering@gmail.com</a>
-    </p>
-
-    <p>
-      See also our
-      <a href="https://core2extrem.github.io/athkar-privacy/">Privacy Policy</a>.
+      <strong>Saud AlWahbi</strong>
+      <br>
+      <a href="mailto:ismartest@outlook.com">ismartest@outlook.com</a>
     </p>
   </div>
 </section>
