@@ -203,6 +203,33 @@
       للتوقيت المرتبط بالعبادة، تحقَّق من مسجدك أو الجهة المحلية
       المعتمدة.
     </p>
+    <p>
+      <strong>الموقع.</strong> لخدمة هذه الميزات يستخدم التطبيق موقع جهازك:
+      يحسب مواقيت الصلاة لمدينتك، ويوجّه بوصلة القبلة، ويجد المساجد والأماكن
+      القريبة عند طلبك، ويكتشف السفر لأدعية المسافر، ويجيب أسئلة المساعد
+      الذكي المرتبطة بالموقع. وتُرسل إحداثياتك فقط إلى الخدمات التي تجيب كل
+      طلب — مذكورةً كاملةً هنا:
+    </p>
+    <ul>
+      <li><strong>AlAdhan</strong> (api.aladhan.com) — مواقيت الصلاة لإحداثياتك</li>
+      <li><strong>BigDataCloud</strong> — تحويل الإحداثيات إلى اسم مدينة/دولة</li>
+      <li><strong>TomTom Search</strong> — البحث عن المساجد القريبة (أساسي)</li>
+      <li><strong>OpenStreetMap Overpass وNominatim</strong> — البحث عن المساجد (احتياطي)</li>
+      <li><strong>Masjid Near Me</strong> — البحث عن المساجد (احتياطي ثالث)</li>
+      <li><strong>Google (الأماكن، المسارات، الخرائط)</strong> — الإحداثيات (ومسارك عند طلب أماكن «في طريقي») لبحث المساعد الذكي وفتح الاتجاهات</li>
+      <li><strong>مزوّد المساعد الذكي الذي تختاره</strong> — DeepSeek أو Anthropic (Claude) أو OpenAI أو xAI (Grok): ما دام التطبيق يحمل تحديدًا للموقع، يُرفق اسم مدينتك وإحداثياتك التقريبية (بأربع منازل عشرية ≈ ١١ مترًا) بسياق المحادثة في كل رسالة ترسلها للمساعد، مع سؤالك — إلى المزوّد الواحد الذي يجيبك (وبمفتاحك أنت عند استخدام BYOK)</li>
+    </ul>
+    <p>
+      لا يملك المطوّر أي خادم، ولا يجمع موقعك أو يخزّنه أو يبيعه أبدًا. وإن
+      فعّلت إشعارات الصلاة عالية الدقة فسيُحدَّث موقعك في الخلفية — حتى مع
+      إغلاق التطبيق أو عدم استخدامه — لغرضٍ وحيد هو بقاء تنبيهات الصلاة
+      دقيقة أثناء تنقلك؛ وفي الخلفية تُرسل إحداثياتك إلى AlAdhan فقط (لتحديث
+      جدول الصلاة)، وإيقاف الخيار يوقف ذلك كله. أما بوصلة القبلة واكتشاف
+      السفر فيُحسبان على جهازك بالكامل — وهذه البيانات لا تغادر هاتفك أبدًا.
+      لا يُطلب الموقع إلا بعد إفصاحٍ داخل التطبيق، وإن سحبت الإذن من إعدادات
+      جهازك ظهر الإفصاح مجددًا قبل أي طلبٍ جديد. التفاصيل الكاملة في
+      <a href="../">سياسة الخصوصية</a>.
+    </p>
 
     <h2 id="ar-use">٨. الاستخدام المقبول</h2>
     <p>
@@ -240,7 +267,7 @@
     <p>
       للأسئلة والملاحظات:
       <br>
-      <a href="mailto:instrumentation.engineering@gmail.com">instrumentation.engineering@gmail.com</a>
+      <a href="mailto:ismartest@outlook.com">ismartest@outlook.com</a>
     </p>
 
     <p>
@@ -348,6 +375,37 @@
       device sensors can be imprecise. For worship-critical timing,
       verify with your local mosque or authority.
     </p>
+    <p>
+      <strong>Location.</strong> To serve these features, the app uses your
+      device location: it computes prayer times for your city, points the
+      qibla compass, finds nearby mosques and places when you ask, detects
+      travel for the traveler's duas, and answers location-aware questions
+      you put to the AI assistant. Your coordinates are sent only to the
+      services that answer each request — completely listed here:
+    </p>
+    <ul>
+      <li><strong>AlAdhan</strong> (api.aladhan.com) — prayer times for your coordinates</li>
+      <li><strong>BigDataCloud</strong> — turning coordinates into a city/country name</li>
+      <li><strong>TomTom Search</strong> — nearby-mosque search (primary)</li>
+      <li><strong>OpenStreetMap Overpass &amp; Nominatim</strong> — mosque search (fallback)</li>
+      <li><strong>Masjid Near Me</strong> — mosque search (tertiary fallback)</li>
+      <li><strong>Google (Places, Routes, Maps)</strong> — coordinates (and, when you ask for places "on my way", your route) for the AI assistant's nearby-places and along-route search, and for opening driving directions</li>
+      <li><strong>Your chosen AI assistant provider</strong> — DeepSeek, Anthropic (Claude), OpenAI, or xAI (Grok): while the app holds a location fix, your city name and approximate coordinates (4-decimal, ≈11&nbsp;m) ride the assistant's conversation context on every message you send it, together with your question — to the one provider answering you (under your own key when you use BYOK)</li>
+    </ul>
+    <p>
+      The developer operates no server and never collects, stores, or sells
+      your location. If you enable High-Fidelity prayer notifications, the
+      app additionally keeps your location updated in the background — even
+      when the app is closed or not in use — solely so prayer alerts stay
+      accurate while you move; in the background your coordinates are sent
+      only to AlAdhan (to refresh the prayer schedule), and turning the
+      toggle off stops all of it. The qibla compass and travel detection are
+      computed entirely on your device — that data never leaves your phone.
+      Location is requested only after an in-app disclosure, and if you
+      revoke the permission from your device settings, that disclosure
+      appears again before any new request. Full details:
+      <a href="../">the Privacy Policy</a>.
+    </p>
 
     <h2 id="en-use">8. Acceptable use</h2>
     <p>
@@ -385,7 +443,7 @@
     <p>
       Questions or concerns:
       <br>
-      <a href="mailto:instrumentation.engineering@gmail.com">instrumentation.engineering@gmail.com</a>
+      <a href="mailto:ismartest@outlook.com">ismartest@outlook.com</a>
     </p>
 
     <p>
