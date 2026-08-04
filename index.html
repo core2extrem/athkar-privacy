@@ -150,7 +150,7 @@
     <a class="lang-switch" href="#en">English version ↓</a>
 
     <h1>سياسة الخصوصية — اذكاري بريميوم</h1>
-    <p class="meta">آخر تحديث: 20 May 2026</p>
+    <p class="meta">آخر تحديث: 4 August 2026</p>
 
     <div class="toc">
       <strong>المحتويات:</strong>
@@ -267,7 +267,7 @@
         </tr>
         <tr>
           <td><strong>مزوّد المساعد الذكي الذي تختاره</strong><br>DeepSeek · Anthropic (Claude) · OpenAI · xAI (Grok)</td>
-          <td>اسم مدينتك + إحداثياتك التقريبية (٤ منازل عشرية ≈ ١١ م) ضمن سياق المحادثة، مع رسالتك، وأي صور أو مستندات ترفقها ليقرأها المساعد</td>
+          <td>اسم مدينتك + إحداثياتك التقريبية (٤ منازل عشرية ≈ 11م) ضمن سياق المحادثة، مع رسالتك، وأي صور أو مستندات ترفقها ليقرأها المساعد</td>
           <td>تُرفق مع كل رسالة ترسلها للمساعد ما دام التطبيق يحمل تحديدًا للموقع — إلى المزوّد الواحد الذي يجيبك (وبمفتاحك أنت عند BYOK)</td>
         </tr>
       </tbody>
@@ -323,6 +323,45 @@
     </p>
     </ul>
 
+    <h2 id="ar-drive-backup">النسخ الاحتياطي إلى Google Drive («شيلبي»)</h2>
+    <p>
+      يقدّم التطبيق ميزة نسخ احتياطي <strong>اختيارية بالكامل</strong> إلى
+      Google Drive، لا تعمل إلا إذا سجّلت الدخول بحساب Google بنفسك من داخل
+      التطبيق. عند تفعيلها:
+    </p>
+    <ul>
+      <li>
+        <strong>ماذا يُنسَخ؟</strong> مكتبة مستنداتك المُنشأة داخل التطبيق
+        (التقارير والسير الذاتية وفهارسها)، وبموافقتين منفصلتين
+        (مطفأتان افتراضياً): سجل محادثات «المستشار»، ومفاتيح API التي أدخلتها.
+      </li>
+      <li>
+        <strong>أين تُخزَّن؟</strong> في مجلد بيانات التطبيقات المخفي
+        (appDataFolder) داخل حساب Google Drive <em>الخاص بك أنت</em> —
+        لا يستطيع أي تطبيق آخر قراءته، ونحن لا نملك خادماً ولا نرى نسختك
+        الاحتياطية إطلاقاً. صلاحية الوصول الوحيدة التي يطلبها التطبيق هي
+        نطاق <code>drive.appdata</code> (ملفات التطبيق الخاصة فقط — لا يرى
+        التطبيق ملفاتك الأخرى في Drive أبداً).
+      </li>
+      <li>
+        <strong>متى يعمل تلقائياً؟</strong> بحسب التكرار الذي تختاره —
+        والافتراضي «إيقاف». النسخ التلقائي يعمل فقط عند فتحك للتطبيق؛
+        لا يعمل أي شيء في الخلفية دون علمك.
+      </li>
+      <li>
+        <strong>ما الذي لا يُنسَخ أبداً؟</strong> حالة الاشتراك المميز
+        وعدّاد المواظبة لا يركبان أي نسخة احتياطية سحابية إطلاقاً.
+      </li>
+      <li>
+        <strong>التراجع والحذف:</strong> يمكنك تسجيل الخروج من داخل التطبيق
+        في أي وقت، أو سحب صلاحية التطبيق من
+        <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>،
+        أو حذف بيانات التطبيق المخفية من إعدادات Google Drive
+        (الإعدادات ← إدارة التطبيقات). النسخة الاحتياطية ملفٌ واحد متجدد
+        يُستبدل مع كل نسخ جديد.
+      </li>
+    </ul>
+
     <h2 id="ar-purchases">المشتريات والاشتراكات</h2>
     <p>
       تُدار جميع عمليات الشراء والاشتراك عبر <strong>Google Play
@@ -345,8 +384,8 @@
       تبقى على جهازك حتى تمسح بيانات التطبيق أو تحذفه — فتُحذف كلها فوراً.
       الإحداثيات المرسلة للخدمات المذكورة أعلاه تُستخدم للإجابة على الطلب نفسه
       فقط ولا نحتفظ بها؛ وتخضع كل خدمة لسياسة الاحتفاظ الخاصة بها. النسخة
-      الاحتياطية الاختيارية التي تبدأها بنفسك إلى Google Drive (المحادثات
-      والتقارير والسير الذاتية) تُخزَّن في حسابك أنت وتبقى حتى تحذفها بنفسك.
+      الاحتياطية الاختيارية إلى Google Drive — يدويةً كانت أو تلقائية —
+      (انظر قسم «شيلبي» أعلاه) تُخزَّن في حسابك أنت وتبقى حتى تحذفها بنفسك.
       <strong>إجراء الأمان:</strong> كل طلب يحمل إحداثياتك يُرسَل مشفّراً عبر HTTPS (تشفير أثناء النقل) إلى الخدمات المذكورة أعلاه، ولا يمرّ عبر أي خادم وسيط لنا ولا يُخزَّن لدينا.
     </p>
 
@@ -394,7 +433,7 @@
     <a class="lang-switch" href="#ar">النسخة العربية ↑</a>
 
     <h1>Privacy Policy — Athkar Premium</h1>
-    <p class="meta">Last updated: 20 May 2026</p>
+    <p class="meta">Last updated: 4 August 2026</p>
 
     <div class="toc">
       <strong>Contents:</strong>
@@ -557,6 +596,46 @@
     </p>
     </ul>
 
+    <h2 id="en-drive-backup">Google Drive backup (&ldquo;Shelby&rdquo;)</h2>
+    <p>
+      The app offers an <strong>entirely optional</strong> backup to Google
+      Drive, which only works if you yourself sign in with your Google
+      account inside the app. When enabled:
+    </p>
+    <ul>
+      <li>
+        <strong>What is backed up?</strong> Your in-app document library
+        (reports, CVs and their indexes), and — behind two separate opt-ins,
+        both OFF by default — your Consultant chat history and the API keys
+        you entered.
+      </li>
+      <li>
+        <strong>Where is it stored?</strong> In the hidden app-data folder
+        (appDataFolder) of <em>your own</em> Google Drive account. No other
+        app can read it, and we operate no server and never see your backup.
+        The only permission the app requests is the
+        <code>drive.appdata</code> scope (the app's own private files only —
+        it can never see your other Drive files).
+      </li>
+      <li>
+        <strong>When does it run automatically?</strong> At the frequency you
+        choose — the default is Off. Automatic backup runs only when you
+        open the app; nothing runs in the background without you.
+      </li>
+      <li>
+        <strong>What never rides a cloud backup?</strong> Your premium
+        subscription state and your streak counter — never.
+      </li>
+      <li>
+        <strong>Revoking and deleting:</strong> sign out inside the app at
+        any time, revoke the app's access at
+        <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>,
+        or delete the hidden app data from Google Drive settings
+        (Settings &rarr; Manage apps). The backup is a single rolling file,
+        replaced on every new backup.
+      </li>
+    </ul>
+
     <h2 id="en-purchases">Purchases & subscriptions</h2>
     <p>
       All purchases and subscriptions are processed by <strong>Google
@@ -580,9 +659,9 @@
       uninstall it — at which point all of it is deleted immediately.
       Coordinates sent to the services listed above are used to answer that
       request only and are not retained by us; each service is governed by its
-      own retention policy. The optional backup you yourself initiate to
-      Google Drive (chats, reports, CVs) is stored in <em>your</em> Drive
-      account and remains until you delete it.
+      own retention policy. The optional Google Drive backup — manual or
+      automatic (see the &ldquo;Shelby&rdquo; section above) — is stored in
+      <em>your</em> Drive account and remains until you delete it.
       <strong>Security procedure:</strong> every request that carries your coordinates is transmitted encrypted over HTTPS (encryption in transit) directly to the services listed above — it passes through no intermediary server of ours and is never stored by us.
     </p>
 
