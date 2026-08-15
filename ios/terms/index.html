@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<!--
+  Athkari Premium ‚Äî Terms of Service (bilingual: AR + EN)
+
+  HOW TO PUBLISH (into the EXISTING athkar-privacy repo):
+    1. Open github.com/core2extrem/athkar-privacy
+    2. "Add file" ‚Üí "Upload files" ‚Üí drag the whole "terms" FOLDER
+       (this file must land at: ios/terms/index.html)
+    3. Commit. GitHub Pages refreshes in ~1 minute; the page appears at:
+         https://core2extrem.github.io/athkar-privacy/ios/terms/
+
+  HOW TO UPDATE LATER:
+    Edit ios/terms/index.html in the repo (pencil icon, commit) and bump the
+    effective date in BOTH the Arabic and the English sections.
+
+  Source of truth: the app repo's docs/TERMS_OF_SERVICE_{EN,AR}.md
+  (owner-authored 2026-07-11). Styling mirrors the live privacy page.
+-->
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ÿ¥ÿ±Ÿàÿ∑ ÿßŸÑÿßÿ≥ÿ™ÿÆÿØÿßŸÖ ‚Äî ÿßÿ∞ŸÉÿßÿ±Ÿä ÿ®ÿ±ŸäŸÖŸäŸàŸÖ / Terms of Service ‚Äî Athkari Premium</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg:        #ffffff;
+      --fg:        #0f172a;
+      --muted:     #475569;
+      --accent:    #0d9488;
+      --border:    #e2e8f0;
+      --alt-row:   #f8fafc;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg:      #0f172a;
+        --fg:      #e2e8f0;
+        --muted:   #94a3b8;
+        --accent:  #5eead4;
+        --border:  #1e293b;
+        --alt-row: #111c33;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   "Noto Sans Arabic", "Tahoma", "Helvetica", "Arial",
+                   system-ui, sans-serif;
+      line-height: 1.7;
+      font-size: 16px;
+    }
+    .wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    h1 {
+      font-size: 28px;
+      margin: 0 0 6px;
+      color: var(--accent);
+      line-height: 1.3;
+    }
+    h2 {
+      font-size: 20px;
+      margin: 36px 0 10px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+    }
+    h2:first-of-type { border-top: none; padding-top: 0; }
+    p { margin: 0 0 12px; }
+    ul { margin: 0 0 12px; padding-inline-start: 22px; }
+    li { margin-bottom: 6px; }
+    a { color: var(--accent); text-decoration: underline; }
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+    .toc {
+      background: var(--alt-row);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 18px;
+      margin: 20px 0 32px;
+      font-size: 14px;
+    }
+    .toc a { display: inline-block; margin-inline-end: 14px; }
+    .lang-switch {
+      display: inline-block;
+      background: var(--alt-row);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 4px 16px;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      color: var(--accent);
+      margin-bottom: 28px;
+    }
+    section { scroll-margin-top: 20px; }
+    @media (max-width: 540px) {
+      .wrap { padding: 24px 16px 60px; }
+      h1 { font-size: 24px; }
+      h2 { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ================================================================
+     ARABIC SECTION (default ‚Äî page opens here)
+     ================================================================ -->
+<section id="ar" dir="rtl" lang="ar">
+  <div class="wrap">
+    <a class="lang-switch" href="#en">English version ‚Üì</a>
+
+    <h1>ÿ¥ÿ±Ÿàÿ∑ ÿßŸÑÿßÿ≥ÿ™ÿÆÿØÿßŸÖ ‚Äî ÿßÿ∞ŸÉÿßÿ±Ÿä ÿ®ÿ±ŸäŸÖŸäŸàŸÖ</h1>
+    <p class="meta">ÿ™ÿßÿ±ŸäÿÆ ÿßŸÑÿ≥ÿ±ŸäÿßŸÜ: Ÿ°Ÿ° ŸäŸàŸÑŸäŸà Ÿ¢Ÿ†Ÿ¢Ÿ¶</p>
+
+    <div class="toc">
+      <strong>ÿßŸÑŸÖÿ≠ÿ™ŸàŸäÿßÿ™:</strong>
+      <a href="#ar-what">ŸÖÿß ŸáŸà ÿßŸÑÿ™ÿ∑ÿ®ŸäŸÇ</a>
+      <a href="#ar-account">ŸÑÿß ÿ≠ÿßÿ¨ÿ© ŸÑÿ≠ÿ≥ÿßÿ®</a>
+      <a href="#ar-purchases">ÿßŸÑŸÖÿ¥ÿ™ÿ±Ÿäÿßÿ™</a>
+      <a href="#ar-byok">ŸÖŸÅÿßÿ™Ÿäÿ≠ŸÉ (BYOK)</a>
+      <a href="#ar-free2026">¬´ŸÖÿ¨ÿßŸÜŸä ÿ∑ŸàÿßŸÑ 2026¬ª</a>
+      <a href="#ar-ai">ŸÖÿ≠ÿ™ŸàŸâ ÿßŸÑÿ∞ŸÉÿßÿ° ÿßŸÑÿßÿµÿ∑ŸÜÿßÿπŸä</a>
+      <a href="#ar-prayer">ÿßŸÑŸÖŸàÿßŸÇŸäÿ™ ŸàÿßŸÑŸÇÿ®ŸÑÿ©</a>
+      <a href="#ar-use">ÿßŸÑÿßÿ≥ÿ™ÿÆÿØÿßŸÖ ÿßŸÑŸÖŸÇÿ®ŸàŸÑ</a>
+      <a href="#ar-ip">ÿßŸÑŸÖŸÑŸÉŸäÿ© ÿßŸÑŸÅŸÉÿ±Ÿäÿ©</a>
+      <a href="#ar-liability">ÿ•ÿÆŸÑÿßÿ° ÿßŸÑŸÖÿ≥ÿ§ŸàŸÑŸäÿ©</a>
+      <a href="#ar-changes">ÿßŸÑÿ™ÿπÿØŸäŸÑÿßÿ™</a>
+      <a href="#ar-contact">ÿßŸÑÿ™ŸàÿßÿµŸÑ</a>
+    </div>
+
+    <p>
+      ŸÖÿ±ÿ≠ÿ®ÿßŸã ÿ®ŸÉ ŸÅŸä ÿ™ÿ∑ÿ®ŸäŸÇ <strong>ÿßÿ∞ŸÉÿßÿ±Ÿä ÿ®ÿ±ŸäŸÖŸäŸàŸÖ</strong> (¬´ÿßŸÑÿ™ÿ∑ÿ®ŸäŸÇ¬ª).
+      ÿ®ÿ™ŸÜÿ≤ŸäŸÑŸÉ ÿßŸÑÿ™ÿ∑ÿ®ŸäŸÇ ÿ£Ÿà ÿßÿ≥ÿ™ÿÆÿØÿßŸÖŸÉ ŸÑŸá ŸÅÿ£ŸÜÿ™ ÿ™ŸàÿßŸÅŸÇ ÿπŸÑŸâ Ÿáÿ∞Ÿá ÿßŸÑÿ¥ÿ±Ÿàÿ∑. ŸÜÿ±ÿ¨Ÿà
+      ŸÇÿ±ÿßÿ°ÿ™Ÿáÿß ‚Äî ŸÅŸáŸä ŸÇÿµŸäÿ±ÿ© Ÿàÿµÿ±Ÿäÿ≠ÿ©.
+    </p>
+
+    <h2 id="ar-what">Ÿ°. ŸÖÿß ŸáŸà ÿßŸÑÿ™ÿ∑ÿ®ŸäŸÇ</h2>
+    <p>
+      ÿßÿ∞ŸÉÿßÿ±Ÿä ÿ®ÿ±ŸäŸÖŸäŸàŸÖ ÿ±ŸÅŸäŸÇŸå ÿ•ÿ≥ŸÑÿßŸÖŸä: ÿπÿØŸëÿßÿØ ÿ£ÿ∞ŸÉÿßÿ± Ÿàÿ™ÿ≥ÿ®Ÿäÿ≠ÿå ŸÖŸàÿßŸÇŸäÿ™ ÿßŸÑÿµŸÑÿßÿ©ÿå
+      ÿßÿ™ÿ¨ÿßŸá ÿßŸÑŸÇÿ®ŸÑÿ©ÿå ÿ™ŸÇŸàŸäŸÖ ÿ•ÿ≥ŸÑÿßŸÖŸäÿå ŸàŸÖÿ≥ÿßÿπÿØ ÿ∞ŸÉÿßÿ° ÿßÿµÿ∑ŸÜÿßÿπŸä ÿßÿÆÿ™Ÿäÿßÿ±Ÿä. ŸäŸÇÿØŸéŸëŸÖ ÿ™ÿ∑ÿ®ŸäŸÇ ¬´ÿßÿ∞ŸÉÿßÿ±Ÿä ÿ®ÿ±ŸäŸÖŸäŸàŸÖ: ŸÖŸàÿßŸÇŸäÿ™ ÿßŸÑÿµŸÑÿßÿ©¬ª (ÿßŸÑŸÖÿπÿ±ŸëŸÅ:
+      com.saudalwahbi.athkar) ÿπŸÑŸâ App Store ÿ®ÿßÿ≥ŸÖ ÿßŸÑŸÖÿ∑ŸàŸëÿ±
+      <strong>SAUD ALWAHBI</strong> ‚Äî ÿßŸÑŸÉŸäÿßŸÜ ÿßŸÑŸÇÿßŸÜŸàŸÜŸä: <strong>ALWAHBI, SAUD
+      MOFAREH A</strong>ÿå ÿßŸÑÿÆŸÅÿ¨Ÿäÿå ÿßŸÑŸÖŸÖŸÑŸÉÿ© ÿßŸÑÿπÿ±ÿ®Ÿäÿ© ÿßŸÑÿ≥ÿπŸàÿØŸäÿ© (¬´ŸÜÿ≠ŸÜ¬ª).
+    </p>
+
+    <h2 id="ar-account">Ÿ¢. ŸÑÿß ÿ≠ÿßÿ¨ÿ© ŸÑÿ≠ÿ≥ÿßÿ®</h2>
+    <p>
+      ŸÑÿß Ÿäÿ™ÿ∑ŸÑÿ® ÿßŸÑÿ™ÿ∑ÿ®ŸäŸÇ ÿ•ŸÜÿ¥ÿßÿ° ÿ≠ÿ≥ÿßÿ®. ÿ®ŸäÿßŸÜÿßÿ™ŸÉ (ÿßŸÑÿπÿØŸëÿßÿ™ÿå ÿßŸÑÿ•ŸÜÿ¨ÿßÿ≤ÿßÿ™ÿå
+      ÿßŸÑÿ•ÿπÿØÿßÿØÿßÿ™ÿå ÿ≥ÿ¨ŸÑ ÿßŸÑŸÖÿ≠ÿßÿØÿ´ÿ©) ÿ™ÿ®ŸÇŸâ ÿπŸÑŸâ ÿ¨Ÿáÿßÿ≤ŸÉ. ÿßŸÑŸÜÿ≥ÿÆ ÿßŸÑÿßÿ≠ÿ™Ÿäÿßÿ∑Ÿä ÿßŸÑÿßÿÆÿ™Ÿäÿßÿ±Ÿä
+      ÿπÿ®ÿ± Google Ÿäÿ¥ŸÖŸÑ <strong>ÿ≥ÿ¨ŸÑ ÿßŸÑŸÖÿ≠ÿßÿØÿ´ÿ© ŸÅŸÇÿ∑</strong>. ÿ•ÿ∞ÿß ÿ≠ÿ∞ŸÅÿ™ ÿßŸÑÿ™ÿ∑ÿ®ŸäŸÇ
+      ÿ≠Ÿèÿ∞ŸÅÿ™ ÿßŸÑÿ®ŸäÿßŸÜÿßÿ™ ÿßŸÑŸÖÿÆÿ≤ŸëŸÜÿ© ÿπŸÑŸâ ÿßŸÑÿ¨Ÿáÿßÿ≤ ŸÖÿπŸá.
+    </p>
+
+    <h2 id="ar-purchases">Ÿ£. ÿßŸÑŸÖÿ¥ÿ™ÿ±Ÿäÿßÿ™</h2>
+    <p>
+      ÿ™Ÿèÿ®ÿßÿπ ÿßŸÑŸÖŸäÿ≤ÿßÿ™ ÿßŸÑŸÖÿØŸÅŸàÿπÿ© ŸÉÿßÿ¥ÿ™ÿ±ÿßŸÉÿßÿ™ ÿ£Ÿà ŸÖÿ¥ÿ™ÿ±Ÿäÿßÿ™ ŸÑŸÖÿ±ÿ© Ÿàÿßÿ≠ÿØÿ© ÿπÿ®ÿ±
+      <strong>App Store</strong>. ÿßŸÑŸÅŸàÿ™ÿ±ÿ© ŸàÿßŸÑÿ™ÿ¨ÿØŸäÿØ ŸàÿßŸÑÿ•ŸÑÿ∫ÿßÿ° ÿ™ÿØŸäÿ±Ÿáÿß
+      Apple ŸàŸÅŸÇ ÿ¥ÿ±Ÿàÿ∑ Apple. ŸäŸÖŸÉŸÜŸÉ ÿßŸÑÿ•ÿØÿßÿ±ÿ© ÿ£Ÿà ÿßŸÑÿ•ŸÑÿ∫ÿßÿ° ŸÅŸä ÿ£Ÿä ŸàŸÇÿ™ ŸÖŸÜ
+      ÿ•ÿπÿØÿßÿØÿßÿ™ ÿßŸÑÿßÿ¥ÿ™ÿ±ÿßŸÉÿßÿ™. Ÿàÿ™ÿÆÿ∂ÿπ ÿßŸÑŸÖÿ®ÿßŸÑÿ∫ ÿßŸÑŸÖÿ≥ÿ™ÿ±ÿØŸéŸëÿ© ŸÑÿ≥Ÿäÿßÿ≥ÿ© App Store.
+    </p>
+
+    <h2 id="ar-byok">Ÿ§. ŸÖŸÅÿßÿ™Ÿäÿ≠ ÿßŸÑÿ∞ŸÉÿßÿ° ÿßŸÑÿßÿµÿ∑ŸÜÿßÿπŸä ÿßŸÑÿÆÿßÿµÿ© ÿ®ŸÉ (BYOK)</h2>
+    <p>
+      ŸäÿπŸÖŸÑ ÿßŸÑŸÖÿ≥ÿßÿπÿØ ÿßŸÑÿ∞ŸÉŸä <strong>ÿ®ŸÖŸÅÿßÿ™Ÿäÿ≠ API ÿßŸÑÿÆÿßÿµÿ© ÿ®ŸÉ</strong> (ŸÖÿ´ŸÑ
+      OpenAI ŸàAnthropic ŸàxAI ŸàDeepSeek ŸàGoogle):
+    </p>
+    <ul>
+      <li>ÿ™ŸèÿÆÿ≤ŸéŸëŸÜ ŸÖŸÅÿßÿ™Ÿäÿ≠ŸÉ <strong>ÿπŸÑŸâ ÿ¨Ÿáÿßÿ≤ŸÉ</strong> Ÿàÿ™Ÿèÿ≥ÿ™ÿÆÿØŸÖ ŸÅŸÇÿ∑
+          ŸÑŸÑÿßÿ™ÿµÿßŸÑ ÿ®ÿßŸÑŸÖÿ≤ŸàŸêŸëÿØ ÿßŸÑÿ∞Ÿä ÿßÿÆÿ™ÿ±ÿ™Ÿá.</li>
+      <li>ÿßŸÑÿßÿ≥ÿ™ŸáŸÑÿßŸÉ <strong>ŸäŸÅŸàÿ™ÿ±Ÿá ÿ∞ŸÑŸÉ ÿßŸÑŸÖÿ≤ŸàŸêŸëÿØ ÿπŸÑŸäŸÉ ŸÖÿ®ÿßÿ¥ÿ±ÿ©</strong> ŸàŸÅŸÇ
+          ÿ¥ÿ±Ÿàÿ∑Ÿá Ÿàÿ£ÿ≥ÿπÿßÿ±Ÿá. ŸÑÿ≥ŸÜÿß ÿ∑ÿ±ŸÅÿßŸã ŸÅŸä ÿ™ŸÑŸÉ ÿßŸÑÿπŸÑÿßŸÇÿ©ÿå ŸàŸÑÿß ŸÜÿ™ÿ≠ŸÖŸëŸÑ ŸÖÿ≥ÿ§ŸàŸÑŸäÿ©
+          ÿ±ÿ≥ŸàŸÖ ÿßŸÑŸÖÿ≤ŸàŸêŸëÿØ ÿ£Ÿà ÿ≠ÿµÿµŸá ÿ£Ÿà ÿßŸÜŸÇÿ∑ÿßÿπÿßÿ™Ÿá ÿ£Ÿà ÿ™ÿ∫ŸäŸëÿ± ÿ≥Ÿäÿßÿ≥ÿßÿ™Ÿá.</li>
+      <li>ÿ≠ÿßŸÅÿ∏ ÿπŸÑŸâ ÿ≥ÿ±Ÿäÿ© ŸÖŸÅÿßÿ™Ÿäÿ≠ŸÉÿõ ŸàŸäŸÖŸÉŸÜŸÉ ÿ≠ÿ∞ŸÅŸáÿß ŸÖŸÜ ÿßŸÑÿ™ÿ∑ÿ®ŸäŸÇ ŸÅŸä ÿ£Ÿä ŸàŸÇÿ™.</li>
+    </ul>
+
+    <h2 id="ar-free2026">Ÿ•. ÿßŸÑŸÖŸäÿ≤ÿßÿ™ ÿßŸÑŸÖŸàÿ≥ŸàŸÖÿ© ¬´ŸÖÿ¨ÿßŸÜŸä ÿ∑ŸàÿßŸÑ 2026¬ª</h2>
+    <p>
+      ÿ®ÿπÿ∂ ÿßŸÑŸÖŸäÿ≤ÿßÿ™ (ŸÖÿ´ŸÑ ÿßŸÑÿ®ÿ≠ÿ´ ÿßŸÑÿπŸÖŸäŸÇ ÿßŸÑŸÖÿ≤ÿØŸàÿ¨ Dual-Fusion) ŸÖŸàÿ≥ŸàŸÖÿ© ÿ®ÿ£ŸÜŸáÿß
+      <strong>ŸÖÿ¨ÿßŸÜŸäÿ© ÿ∑ŸàÿßŸÑ 2026</strong>ÿå ŸàŸÜÿπÿ™ÿ≤ŸÖ ŸÜŸÇŸÑŸáÿß ŸÑÿßÿ≠ŸÇÿßŸã ÿ•ŸÑŸâ ŸÜÿ∏ÿßŸÖ
+      ŸÜŸÇÿßÿ∑ (Credits). ŸÇÿØ ÿ™ÿ™ÿ∫ŸäŸëÿ± ÿ£ÿ≥ÿπÿßÿ± ÿßŸÑŸÖŸäÿ≤ÿßÿ™ ÿßŸÑŸÖÿØŸÅŸàÿπÿ© ÿßŸÑŸÖÿ≥ÿ™ŸÇÿ®ŸÑŸäÿ©
+      Ÿàÿ™ŸàÿßŸÅÿ±Ÿáÿßÿõ ŸàŸÖÿß ÿ≥ÿ®ŸÇ ÿ£ŸÜ ÿßÿ¥ÿ™ÿ±Ÿäÿ™Ÿá Ÿäÿ®ŸÇŸâ ÿÆÿßÿ∂ÿπÿßŸã ŸÑŸÇŸàÿßÿπÿØ App Store.
+    </p>
+
+    <h2 id="ar-ai">Ÿ¶. ŸÖÿ≠ÿ™ŸàŸâ ÿßŸÑÿ∞ŸÉÿßÿ° ÿßŸÑÿßÿµÿ∑ŸÜÿßÿπŸä ‚Äî ŸÖŸáŸÖ</h2>
+    <p>
+      ÿßŸÑÿ•ÿ¨ÿßÿ®ÿßÿ™ ŸàÿßŸÑÿ™ŸÇÿßÿ±Ÿäÿ± ŸàÿßŸÑŸÖÿ≥ÿ™ŸÜÿØÿßÿ™ ÿßŸÑÿ™Ÿä ŸäŸÜÿ™ÿ¨Ÿáÿß ÿßŸÑŸÖÿ≥ÿßÿπÿØ ÿ™ŸàŸÑŸëÿØŸáÿß ŸÜŸÖÿßÿ∞ÿ¨
+      ÿ∞ŸÉÿßÿ° ÿßÿµÿ∑ŸÜÿßÿπŸä ÿ™ÿßÿ®ÿπÿ© ŸÑÿ¨Ÿáÿßÿ™ ÿÆÿßÿ±ÿ¨Ÿäÿ©ÿå ŸàŸÇÿØ ÿ™ŸÉŸàŸÜ <strong>ÿÆÿßÿ∑ÿ¶ÿ© ÿ£Ÿà ŸÜÿßŸÇÿµÿ©
+      ÿ£Ÿà ÿ∫Ÿäÿ± ŸÖÿ≠ÿØŸéŸëÿ´ÿ©</strong>ÿå ŸàŸáŸä <strong>ŸÑŸäÿ≥ÿ™</strong> ŸÅÿ™ŸàŸâ ÿ¥ÿ±ÿπŸäÿ© ŸàŸÑÿß
+      ÿßÿ≥ÿ™ÿ¥ÿßÿ±ÿ© ŸÇÿßŸÜŸàŸÜŸäÿ© ÿ£Ÿà ÿ∑ÿ®Ÿäÿ© ÿ£Ÿà ŸÖÿßŸÑŸäÿ©. ÿ™ÿ≠ŸÇŸéŸëŸÇ ŸÖŸÜ ÿßŸÑÿ£ŸÖŸàÿ± ÿßŸÑŸÖŸáŸÖÿ© ŸÑÿØŸâ ÿ£ŸáŸÑ
+      ÿßŸÑÿßÿÆÿ™ÿµÿßÿµ.
+    </p>
+
+    <h2 id="ar-prayer">Ÿß. ŸÖŸàÿßŸÇŸäÿ™ ÿßŸÑÿµŸÑÿßÿ© ŸàÿßŸÑŸÇÿ®ŸÑÿ©</h2>
+    <p>
+      ŸÖŸàÿßŸÇŸäÿ™ ÿßŸÑÿµŸÑÿßÿ© Ÿàÿßÿ™ÿ¨ÿßŸá ÿßŸÑŸÇÿ®ŸÑÿ© ŸàÿßŸÑÿ®ŸäÿßŸÜÿßÿ™ ÿßŸÑŸÅŸÑŸÉŸäÿ© <strong>ÿ≠ÿ≥ÿßÿ®ÿßÿ™
+      ÿ™ŸÇÿØŸäÿ±Ÿäÿ©</strong>. ÿ™ÿÆÿ™ŸÑŸÅ ÿ∑ÿ±ŸÇ ÿßŸÑÿ≠ÿ≥ÿßÿ® ŸàŸÇÿØ ÿ™ÿ™ŸÅÿßŸàÿ™ ÿØŸÇÿ© ÿ≠ÿ≥ÿßÿ≥ÿßÿ™ ÿßŸÑÿ¨Ÿáÿßÿ≤.
+      ŸÑŸÑÿ™ŸàŸÇŸäÿ™ ÿßŸÑŸÖÿ±ÿ™ÿ®ÿ∑ ÿ®ÿßŸÑÿπÿ®ÿßÿØÿ©ÿå ÿ™ÿ≠ŸÇŸéŸëŸÇ ŸÖŸÜ ŸÖÿ≥ÿ¨ÿØŸÉ ÿ£Ÿà ÿßŸÑÿ¨Ÿáÿ© ÿßŸÑŸÖÿ≠ŸÑŸäÿ©
+      ÿßŸÑŸÖÿπÿ™ŸÖÿØÿ©.
+    </p>
+    <p>
+      <strong>ÿßŸÑŸÖŸàŸÇÿπ.</strong> ŸÑÿÆÿØŸÖÿ© Ÿáÿ∞Ÿá ÿßŸÑŸÖŸäÿ≤ÿßÿ™ Ÿäÿ≥ÿ™ÿÆÿØŸÖ ÿßŸÑÿ™ÿ∑ÿ®ŸäŸÇ ŸÖŸàŸÇÿπ ÿ¨Ÿáÿßÿ≤ŸÉ:
+      Ÿäÿ≠ÿ≥ÿ® ŸÖŸàÿßŸÇŸäÿ™ ÿßŸÑÿµŸÑÿßÿ© ŸÑŸÖÿØŸäŸÜÿ™ŸÉÿå ŸàŸäŸàÿ¨ŸëŸá ÿ®ŸàÿµŸÑÿ© ÿßŸÑŸÇÿ®ŸÑÿ©ÿå ŸàŸäÿ¨ÿØ ÿßŸÑŸÖÿ≥ÿßÿ¨ÿØ ŸàÿßŸÑÿ£ŸÖÿßŸÉŸÜ
+      ÿßŸÑŸÇÿ±Ÿäÿ®ÿ© ÿπŸÜÿØ ÿ∑ŸÑÿ®ŸÉÿå ŸàŸäŸÉÿ™ÿ¥ŸÅ ÿßŸÑÿ≥ŸÅÿ± ŸÑÿ£ÿØÿπŸäÿ© ÿßŸÑŸÖÿ≥ÿßŸÅÿ±ÿå ŸàŸäÿ¨Ÿäÿ® ÿ£ÿ≥ÿ¶ŸÑÿ© ÿßŸÑŸÖÿ≥ÿßÿπÿØ
+      ÿßŸÑÿ∞ŸÉŸä ÿßŸÑŸÖÿ±ÿ™ÿ®ÿ∑ÿ© ÿ®ÿßŸÑŸÖŸàŸÇÿπ. Ÿàÿ™Ÿèÿ±ÿ≥ŸÑ ÿ•ÿ≠ÿØÿßÿ´Ÿäÿßÿ™ŸÉ ŸÅŸÇÿ∑ ÿ•ŸÑŸâ ÿßŸÑÿÆÿØŸÖÿßÿ™ ÿßŸÑÿ™Ÿä ÿ™ÿ¨Ÿäÿ® ŸÉŸÑ
+      ÿ∑ŸÑÿ® ‚Äî ŸÖÿ∞ŸÉŸàÿ±ÿ©Ÿã ŸÉÿßŸÖŸÑÿ©Ÿã ŸáŸÜÿß:
+    </p>
+    <ul>
+      <li><strong>AlAdhan</strong> (api.aladhan.com) ‚Äî ŸÖŸàÿßŸÇŸäÿ™ ÿßŸÑÿµŸÑÿßÿ© ŸÑÿ•ÿ≠ÿØÿßÿ´Ÿäÿßÿ™ŸÉ</li>
+      <li><strong>BigDataCloud</strong> ‚Äî ÿ™ÿ≠ŸàŸäŸÑ ÿßŸÑÿ•ÿ≠ÿØÿßÿ´Ÿäÿßÿ™ ÿ•ŸÑŸâ ÿßÿ≥ŸÖ ŸÖÿØŸäŸÜÿ©/ÿØŸàŸÑÿ©</li>
+      <li><strong>TomTom Search</strong> ‚Äî ÿßŸÑÿ®ÿ≠ÿ´ ÿπŸÜ ÿßŸÑŸÖÿ≥ÿßÿ¨ÿØ ÿßŸÑŸÇÿ±Ÿäÿ®ÿ© (ÿ£ÿ≥ÿßÿ≥Ÿä)</li>
+      <li><strong>OpenStreetMap Overpass ŸàNominatim</strong> ‚Äî ÿßŸÑÿ®ÿ≠ÿ´ ÿπŸÜ ÿßŸÑŸÖÿ≥ÿßÿ¨ÿØ (ÿßÿ≠ÿ™Ÿäÿßÿ∑Ÿä)</li>
+      <li><strong>Masjid Near Me</strong> ‚Äî ÿßŸÑÿ®ÿ≠ÿ´ ÿπŸÜ ÿßŸÑŸÖÿ≥ÿßÿ¨ÿØ (ÿßÿ≠ÿ™Ÿäÿßÿ∑Ÿä ÿ´ÿßŸÑÿ´)</li>
+      <li><strong>Google (ÿßŸÑÿ£ŸÖÿßŸÉŸÜÿå ÿßŸÑŸÖÿ≥ÿßÿ±ÿßÿ™ÿå ÿßŸÑÿÆÿ±ÿßÿ¶ÿ∑)</strong> ‚Äî ÿßŸÑÿ•ÿ≠ÿØÿßÿ´Ÿäÿßÿ™ (ŸàŸÖÿ≥ÿßÿ±ŸÉ ÿπŸÜÿØ ÿ∑ŸÑÿ® ÿ£ŸÖÿßŸÉŸÜ ¬´ŸÅŸä ÿ∑ÿ±ŸäŸÇŸä¬ª) ŸÑÿ®ÿ≠ÿ´ ÿßŸÑŸÖÿ≥ÿßÿπÿØ ÿßŸÑÿ∞ŸÉŸä ŸàŸÅÿ™ÿ≠ ÿßŸÑÿßÿ™ÿ¨ÿßŸáÿßÿ™</li>
+      <li><strong>ŸÖÿ≤ŸàŸëÿØ ÿßŸÑŸÖÿ≥ÿßÿπÿØ ÿßŸÑÿ∞ŸÉŸä ÿßŸÑÿ∞Ÿä ÿ™ÿÆÿ™ÿßÿ±Ÿá</strong> ‚Äî DeepSeek ÿ£Ÿà Anthropic (Claude) ÿ£Ÿà OpenAI ÿ£Ÿà xAI (Grok): ŸÖÿß ÿØÿßŸÖ ÿßŸÑÿ™ÿ∑ÿ®ŸäŸÇ Ÿäÿ≠ŸÖŸÑ ÿ™ÿ≠ÿØŸäÿØŸãÿß ŸÑŸÑŸÖŸàŸÇÿπÿå ŸäŸèÿ±ŸÅŸÇ ÿßÿ≥ŸÖ ŸÖÿØŸäŸÜÿ™ŸÉ Ÿàÿ•ÿ≠ÿØÿßÿ´Ÿäÿßÿ™ŸÉ ÿßŸÑÿ™ŸÇÿ±Ÿäÿ®Ÿäÿ© (ÿ®ÿ£ÿ±ÿ®ÿπ ŸÖŸÜÿßÿ≤ŸÑ ÿπÿ¥ÿ±Ÿäÿ© ‚âà Ÿ°Ÿ° ŸÖÿ™ÿ±Ÿãÿß) ÿ®ÿ≥ŸäÿßŸÇ ÿßŸÑŸÖÿ≠ÿßÿØÿ´ÿ© ŸÅŸä ŸÉŸÑ ÿ±ÿ≥ÿßŸÑÿ© ÿ™ÿ±ÿ≥ŸÑŸáÿß ŸÑŸÑŸÖÿ≥ÿßÿπÿØÿå ŸÖÿπ ÿ≥ÿ§ÿßŸÑŸÉ ‚Äî ÿ•ŸÑŸâ ÿßŸÑŸÖÿ≤ŸàŸëÿØ ÿßŸÑŸàÿßÿ≠ÿØ ÿßŸÑÿ∞Ÿä Ÿäÿ¨Ÿäÿ®ŸÉ (Ÿàÿ®ŸÖŸÅÿ™ÿßÿ≠ŸÉ ÿ£ŸÜÿ™ ÿπŸÜÿØ ÿßÿ≥ÿ™ÿÆÿØÿßŸÖ BYOK)</li>
+    </ul>
+    <p>
+      ŸÑÿß ŸäŸÖŸÑŸÉ ÿßŸÑŸÖÿ∑ŸàŸëÿ± ÿ£Ÿä ÿÆÿßÿØŸÖÿå ŸàŸÑÿß Ÿäÿ¨ŸÖÿπ ŸÖŸàŸÇÿπŸÉ ÿ£Ÿà ŸäÿÆÿ≤ŸëŸÜŸá ÿ£Ÿà Ÿäÿ®ŸäÿπŸá ÿ£ÿ®ÿØŸãÿß. Ÿàÿ•ŸÜ
+      ŸÅÿπŸëŸÑÿ™ ÿ•ÿ¥ÿπÿßÿ±ÿßÿ™ ÿßŸÑÿµŸÑÿßÿ© ÿπÿßŸÑŸäÿ© ÿßŸÑÿØŸÇÿ© ŸÅÿ≥ŸäŸèÿ≠ÿØŸéŸëÿ´ ŸÖŸàŸÇÿπŸÉ ŸÅŸä ÿßŸÑÿÆŸÑŸÅŸäÿ© ‚Äî ÿ≠ÿ™Ÿâ ŸÖÿπ
+      ÿ•ÿ∫ŸÑÿßŸÇ ÿßŸÑÿ™ÿ∑ÿ®ŸäŸÇ ÿ£Ÿà ÿπÿØŸÖ ÿßÿ≥ÿ™ÿÆÿØÿßŸÖŸá ‚Äî ŸÑÿ∫ÿ±ÿ∂Ÿç Ÿàÿ≠ŸäÿØ ŸáŸà ÿ®ŸÇÿßÿ° ÿ™ŸÜÿ®ŸäŸáÿßÿ™ ÿßŸÑÿµŸÑÿßÿ©
+      ÿØŸÇŸäŸÇÿ© ÿ£ÿ´ŸÜÿßÿ° ÿ™ŸÜŸÇŸÑŸÉÿõ ŸàŸÅŸä ÿßŸÑÿÆŸÑŸÅŸäÿ© ÿ™Ÿèÿ±ÿ≥ŸÑ ÿ•ÿ≠ÿØÿßÿ´Ÿäÿßÿ™ŸÉ ÿ•ŸÑŸâ AlAdhan ŸÅŸÇÿ∑ (ŸÑÿ™ÿ≠ÿØŸäÿ´
+      ÿ¨ÿØŸàŸÑ ÿßŸÑÿµŸÑÿßÿ©)ÿå Ÿàÿ•ŸäŸÇÿßŸÅ ÿßŸÑÿÆŸäÿßÿ± ŸäŸàŸÇŸÅ ÿ∞ŸÑŸÉ ŸÉŸÑŸá. ÿ£ŸÖÿß ÿ®ŸàÿµŸÑÿ© ÿßŸÑŸÇÿ®ŸÑÿ© ŸàÿßŸÉÿ™ÿ¥ÿßŸÅ
+      ÿßŸÑÿ≥ŸÅÿ± ŸÅŸäŸèÿ≠ÿ≥ÿ®ÿßŸÜ ÿπŸÑŸâ ÿ¨Ÿáÿßÿ≤ŸÉ ÿ®ÿßŸÑŸÉÿßŸÖŸÑ ‚Äî ŸàŸáÿ∞Ÿá ÿßŸÑÿ®ŸäÿßŸÜÿßÿ™ ŸÑÿß ÿ™ÿ∫ÿßÿØÿ± Ÿáÿßÿ™ŸÅŸÉ ÿ£ÿ®ÿØŸãÿß.
+      ŸÑÿß ŸäŸèÿ∑ŸÑÿ® ÿßŸÑŸÖŸàŸÇÿπ ÿ•ŸÑÿß ÿ®ÿπÿØ ÿ•ŸÅÿµÿßÿ≠Ÿç ÿØÿßÿÆŸÑ ÿßŸÑÿ™ÿ∑ÿ®ŸäŸÇÿå Ÿàÿ•ŸÜ ÿ≥ÿ≠ÿ®ÿ™ ÿßŸÑÿ•ÿ∞ŸÜ ŸÖŸÜ ÿ•ÿπÿØÿßÿØÿßÿ™
+      ÿ¨Ÿáÿßÿ≤ŸÉ ÿ∏Ÿáÿ± ÿßŸÑÿ•ŸÅÿµÿßÿ≠ ŸÖÿ¨ÿØÿØŸãÿß ŸÇÿ®ŸÑ ÿ£Ÿä ÿ∑ŸÑÿ®Ÿç ÿ¨ÿØŸäÿØ. ÿßŸÑÿ™ŸÅÿßÿµŸäŸÑ ÿßŸÑŸÉÿßŸÖŸÑÿ© ŸÅŸä
+      <a href="../">ÿ≥Ÿäÿßÿ≥ÿ© ÿßŸÑÿÆÿµŸàÿµŸäÿ©</a>.
+    </p>
+
+    <h2 id="ar-use">Ÿ®. ÿßŸÑÿßÿ≥ÿ™ÿÆÿØÿßŸÖ ÿßŸÑŸÖŸÇÿ®ŸàŸÑ</h2>
+    <p>
+      ŸÑÿß ÿ™ÿ≥ÿ¶ ÿßÿ≥ÿ™ÿÆÿØÿßŸÖ ÿßŸÑÿ™ÿ∑ÿ®ŸäŸÇ: ŸÑÿß ÿßÿ≥ÿ™ÿÆÿØÿßŸÖ ŸÖÿÆÿßŸÑŸÅÿßŸã ŸÑŸÑŸÇÿßŸÜŸàŸÜÿå ŸàŸÑÿß ŸÖÿ≠ÿßŸàŸÑÿßÿ™
+      ŸÑÿßÿÆÿ™ÿ±ÿßŸÇŸá ÿ£Ÿà ÿ•ÿπÿßÿØÿ© ÿ®ŸäÿπŸá ÿ£Ÿà ÿßŸÜÿ™ÿ≠ÿßŸÑ ÿµŸÅÿ™Ÿáÿå ŸàŸÑÿß ÿßÿ≥ÿ™ÿÆÿØÿßŸÖ ŸÖŸäÿ≤ÿßÿ™ ÿßŸÑÿ∞ŸÉÿßÿ°
+      ÿßŸÑÿßÿµÿ∑ŸÜÿßÿπŸä ŸÑÿ•ŸÜÿ™ÿßÿ¨ ŸÖÿ≠ÿ™ŸàŸâ ÿ∂ÿßÿ± ÿ£Ÿà ÿ∫Ÿäÿ± ŸÖÿ¥ÿ±Ÿàÿπ. ŸÉŸÖÿß ÿ™ÿ∑ÿ®ŸêŸëŸÇ ÿ¨Ÿáÿßÿ™Ÿè ÿßŸÑÿ∞ŸÉÿßÿ°
+      ÿßŸÑÿßÿµÿ∑ŸÜÿßÿπŸä ÿßŸÑÿÆÿßÿ±ÿ¨Ÿäÿ© ÿ≥Ÿäÿßÿ≥ÿßÿ™Ÿê ÿßÿ≥ÿ™ÿÆÿØÿßŸÖŸáÿß ÿßŸÑÿÆÿßÿµÿ© ÿπŸÑŸâ ÿßŸÑÿ∑ŸÑÿ®ÿßÿ™ ÿßŸÑÿ™Ÿä ÿ™ÿ™ŸÖ
+      ÿ®ŸÖŸÅÿßÿ™Ÿäÿ≠ŸÉ.
+    </p>
+
+    <h2 id="ar-ip">Ÿ©. ÿßŸÑŸÖŸÑŸÉŸäÿ© ÿßŸÑŸÅŸÉÿ±Ÿäÿ©</h2>
+    <p>
+      Ÿäÿ®ŸÇŸâ ÿßŸÑÿ™ÿ∑ÿ®ŸäŸÇ Ÿàÿ™ÿµÿßŸÖŸäŸÖŸá ŸàŸÖÿ≠ÿ™ŸàÿßŸá (ÿ®ÿßÿ≥ÿ™ÿ´ŸÜÿßÿ° ÿ®ŸäÿßŸÜÿßÿ™ŸÉ ŸàŸÖÿÆÿ±ÿ¨ÿßÿ™ ÿßŸÑÿ∞ŸÉÿßÿ°
+      ÿßŸÑÿßÿµÿ∑ŸÜÿßÿπŸä ÿßŸÑŸÖŸàŸÑŸéŸëÿØÿ© ŸÑŸÉ) ŸÖŸÑŸÉÿßŸã ŸÑŸÜÿß. ÿ™ÿ≠ÿµŸÑ ÿπŸÑŸâ ÿ™ÿ±ÿÆŸäÿµ ÿ¥ÿÆÿµŸä ÿ∫Ÿäÿ± ŸÇÿßÿ®ŸÑ
+      ŸÑŸÑŸÜŸÇŸÑ ŸÑÿßÿ≥ÿ™ÿÆÿØÿßŸÖ ÿßŸÑÿ™ÿ∑ÿ®ŸäŸÇ ÿπŸÑŸâ ÿ£ÿ¨Ÿáÿ≤ÿ™ŸÉ.
+    </p>
+
+    <h2 id="ar-liability">Ÿ°Ÿ†. ÿ•ÿÆŸÑÿßÿ° ÿßŸÑŸÖÿ≥ÿ§ŸàŸÑŸäÿ©</h2>
+    <p>
+      ŸäŸÇÿØŸéŸëŸÖ ÿßŸÑÿ™ÿ∑ÿ®ŸäŸÇ <strong>¬´ŸÉŸÖÿß ŸáŸà¬ª</strong>. Ÿàÿ•ŸÑŸâ ÿßŸÑÿ≠ÿØ ÿßŸÑÿ£ŸÇÿµŸâ ÿßŸÑÿ∞Ÿä
+      Ÿäÿ≥ŸÖÿ≠ ÿ®Ÿá ÿßŸÑŸÇÿßŸÜŸàŸÜÿå ŸÜŸèÿÆŸÑŸä ŸÖÿ≥ÿ§ŸàŸÑŸäÿ™ŸÜÿß ÿπŸÜ ÿßŸÑÿ∂ŸÖÿßŸÜÿßÿ™ ŸàÿπŸÜ ÿßŸÑÿ£ÿ∂ÿ±ÿßÿ± ÿ∫Ÿäÿ±
+      ÿßŸÑŸÖÿ®ÿßÿ¥ÿ±ÿ© ÿ£Ÿà ÿßŸÑÿ™ÿ®ÿπŸäÿ©ÿå ŸàÿπŸÜ ŸÅŸàÿßÿ™ ÿßŸÑÿµŸÑŸàÿßÿ™ ÿ£Ÿà ÿßŸÑŸÖŸàÿßŸÇŸäÿ™ÿå ŸàÿπŸÜ ÿ™ŸÉÿßŸÑŸäŸÅ
+      ÿßŸÑŸÖÿ≤ŸàŸêŸëÿØŸäŸÜÿå ŸàÿπŸÜ ÿ£Ÿä ÿÆÿ≥ÿßÿ¶ÿ± ŸÜÿßÿ™ÿ¨ÿ© ÿπŸÜ ŸÖÿ≠ÿ™ŸàŸâ ŸÖŸàŸÑŸéŸëÿØ ÿ®ÿßŸÑÿ∞ŸÉÿßÿ° ÿßŸÑÿßÿµÿ∑ŸÜÿßÿπŸä.
+      ŸàŸÑÿß ÿ¥Ÿäÿ° ŸÅŸä Ÿáÿ∞Ÿá ÿßŸÑÿ¥ÿ±Ÿàÿ∑ ŸäŸÜÿ™ŸÇÿµ ŸÖŸÜ ÿßŸÑÿ≠ŸÇŸàŸÇ ÿßŸÑÿ™Ÿä ŸäŸÖŸÜÿ≠ŸÉ ÿ•ŸäÿßŸáÿß ÿßŸÑŸÇÿßŸÜŸàŸÜ.
+    </p>
+
+    <h2 id="ar-changes">Ÿ°Ÿ°. ÿßŸÑÿ™ÿπÿØŸäŸÑÿßÿ™</h2>
+    <p>
+      ŸÇÿØ ŸÜÿ≠ÿØŸêŸëÿ´ Ÿáÿ∞Ÿá ÿßŸÑÿ¥ÿ±Ÿàÿ∑ÿõ ŸàÿπŸÜÿØŸáÿß Ÿäÿ™ÿ∫ŸäŸëÿ± ÿ™ÿßÿ±ŸäÿÆ ÿßŸÑÿ≥ÿ±ŸäÿßŸÜ ÿ£ÿπŸÑÿßŸáÿå ŸàŸäŸèÿπÿØ
+      ÿßÿ≥ÿ™ŸÖÿ±ÿßÿ±ŸÉ ŸÅŸä ÿßŸÑÿßÿ≥ÿ™ÿÆÿØÿßŸÖ ŸÇÿ®ŸàŸÑÿßŸã ÿ®Ÿáÿß. Ÿàÿ≥ŸäŸèÿ¥ÿßÿ± ÿ•ŸÑŸâ ÿßŸÑÿ™ÿ∫ŸäŸäÿ±ÿßÿ™ ÿßŸÑÿ¨ŸàŸáÿ±Ÿäÿ©
+      ÿØÿßÿÆŸÑ ÿßŸÑÿ™ÿ∑ÿ®ŸäŸÇ ÿ£Ÿà ŸÅŸä ÿµŸÅÿ≠ÿ™Ÿá ÿ®ÿßŸÑŸÖÿ™ÿ¨ÿ±.
+    </p>
+
+    <h2 id="ar-contact">Ÿ°Ÿ¢. ÿßŸÑÿ™ŸàÿßÿµŸÑ</h2>
+    <p>
+      ŸÑŸÑÿ£ÿ≥ÿ¶ŸÑÿ© ŸàÿßŸÑŸÖŸÑÿßÿ≠ÿ∏ÿßÿ™:
+      <br>
+      <a href="mailto:ismartest@outlook.com">ismartest@outlook.com</a>
+    </p>
+
+    <p>
+      ÿ±ÿßÿ¨ÿπ ÿ£Ÿäÿ∂ÿßŸã
+      <a href="https://core2extrem.github.io/athkar-privacy/ios/">ÿ≥Ÿäÿßÿ≥ÿ© ÿßŸÑÿÆÿµŸàÿµŸäÿ©</a>.
+    </p>
+  </div>
+</section>
+
+<!-- ================================================================
+     ENGLISH SECTION
+     ================================================================ -->
+<section id="en" dir="ltr" lang="en">
+  <div class="wrap">
+    <a class="lang-switch" href="#ar">ÿßŸÑŸÜÿ≥ÿÆÿ© ÿßŸÑÿπÿ±ÿ®Ÿäÿ© ‚Üë</a>
+
+    <h1>Terms of Service ‚Äî Athkari Premium</h1>
+    <p class="meta">Effective date: July 11, 2026</p>
+
+    <div class="toc">
+      <strong>Contents:</strong>
+      <a href="#en-what">What the App is</a>
+      <a href="#en-account">No account needed</a>
+      <a href="#en-purchases">Purchases</a>
+      <a href="#en-byok">Your keys (BYOK)</a>
+      <a href="#en-free2026">"Free through 2026"</a>
+      <a href="#en-ai">AI content</a>
+      <a href="#en-prayer">Prayer times &amp; qibla</a>
+      <a href="#en-use">Acceptable use</a>
+      <a href="#en-ip">Intellectual property</a>
+      <a href="#en-liability">Disclaimers &amp; liability</a>
+      <a href="#en-changes">Changes</a>
+      <a href="#en-contact">Contact</a>
+    </div>
+
+    <p>
+      Welcome to <strong>Athkari Premium</strong> ("the App"). By
+      downloading or using the App you agree to these terms. Please read
+      them ‚Äî they're short and honest.
+    </p>
+
+    <h2 id="en-what">1. What the App is</h2>
+    <p>
+      Athkari Premium is an Islamic companion app: athkar and dhikr
+      counting, prayer times, qibla direction, an Islamic calendar, and
+      an optional AI assistant. "Athkari Premium: Prayer Times" (package id:
+      com.saudalwahbi.athkar) is published on the Apple App Store under the
+      developer name <strong>SAUD ALWAHBI</strong> ‚Äî legal entity:
+      <strong>ALWAHBI, SAUD MOFAREH A</strong>, Khafji, Saudi Arabia
+      ("we", "us").
+    </p>
+
+    <h2 id="en-account">2. No account needed</h2>
+    <p>
+      The App does not require an account. Your data (counts, streaks,
+      settings, chat history) lives on your device. An optional Google
+      backup covers <strong>chat history only</strong>. If you delete
+      the App, on-device data is removed with it.
+    </p>
+
+    <h2 id="en-purchases">3. Purchases</h2>
+    <p>
+      Premium features are sold as subscriptions or one-time purchases
+      through the <strong>Apple App Store</strong>. Billing, renewal, and
+      cancellation are handled by Apple under Apple's terms.
+      Manage or cancel anytime in your App Store subscription settings. Refunds
+      follow Apple's App Store policy.
+    </p>
+
+    <h2 id="en-byok">4. Bring-your-own-key AI (BYOK)</h2>
+    <p>
+      The AI assistant runs on <strong>your own API keys</strong> (for
+      example OpenAI, Anthropic, xAI, DeepSeek, Google):
+    </p>
+    <ul>
+      <li>Your keys are stored <strong>on your device</strong> and used
+          only to call the provider you chose.</li>
+      <li>Usage is billed <strong>by that provider to you</strong>,
+          under that provider's own terms and prices. We are not a party
+          to that relationship and are not responsible for provider
+          charges, quotas, outages, or policy changes.</li>
+      <li>Keep your keys safe; you can remove them in the App at any
+          time.</li>
+    </ul>
+
+    <h2 id="en-free2026">5. Features marked "Free through 2026"</h2>
+    <p>
+      Some features (for example Dual-Fusion Deep Search) are marked
+      <strong>free through 2026</strong>. We intend to move them to a
+      credits system later. Prices and availability of future paid
+      features may change; anything you already purchased stays governed
+      by Apple's App Store rules.
+    </p>
+
+    <h2 id="en-ai">6. AI content ‚Äî important</h2>
+    <p>
+      Answers, reports, and documents produced by the AI assistant are
+      generated by third-party AI models. They <strong>may be wrong,
+      incomplete, or outdated</strong>, and they are <strong>not</strong>
+      religious rulings (fatwa), legal, medical, or financial advice.
+      Verify important matters with qualified people.
+    </p>
+
+    <h2 id="en-prayer">7. Prayer times &amp; qibla</h2>
+    <p>
+      Prayer times, qibla direction, and astronomical data are
+      <strong>computed estimates</strong>. Calculation methods vary and
+      device sensors can be imprecise. For worship-critical timing,
+      verify with your local mosque or authority.
+    </p>
+    <p>
+      <strong>Location.</strong> To serve these features, the app uses your
+      device location: it computes prayer times for your city, points the
+      qibla compass, finds nearby mosques and places when you ask, detects
+      travel for the traveler's duas, and answers location-aware questions
+      you put to the AI assistant. Your coordinates are sent only to the
+      services that answer each request ‚Äî completely listed here:
+    </p>
+    <ul>
+      <li><strong>AlAdhan</strong> (api.aladhan.com) ‚Äî prayer times for your coordinates</li>
+      <li><strong>BigDataCloud</strong> ‚Äî turning coordinates into a city/country name</li>
+      <li><strong>TomTom Search</strong> ‚Äî nearby-mosque search (primary)</li>
+      <li><strong>OpenStreetMap Overpass &amp; Nominatim</strong> ‚Äî mosque search (fallback)</li>
+      <li><strong>Masjid Near Me</strong> ‚Äî mosque search (tertiary fallback)</li>
+      <li><strong>Google (Places, Routes, Maps)</strong> ‚Äî coordinates (and, when you ask for places "on my way", your route) for the AI assistant's nearby-places and along-route search, and for opening driving directions</li>
+      <li><strong>Your chosen AI assistant provider</strong> ‚Äî DeepSeek, Anthropic (Claude), OpenAI, or xAI (Grok): while the app holds a location fix, your city name and approximate coordinates (4-decimal, ‚âà11&nbsp;m) ride the assistant's conversation context on every message you send it, together with your question ‚Äî to the one provider answering you (under your own key when you use BYOK)</li>
+    </ul>
+    <p>
+      The developer operates no server and never collects, stores, or sells
+      your location. If you enable High-Fidelity prayer notifications, the
+      app additionally keeps your location updated in the background ‚Äî even
+      when the app is closed or not in use ‚Äî solely so prayer alerts stay
+      accurate while you move; in the background your coordinates are sent
+      only to AlAdhan (to refresh the prayer schedule), and turning the
+      toggle off stops all of it. The qibla compass and travel detection are
+      computed entirely on your device ‚Äî that data never leaves your phone.
+      Location is requested only after an in-app disclosure, and if you
+      revoke the permission from your device settings, that disclosure
+      appears again before any new request. Full details:
+      <a href="../">the Privacy Policy</a>.
+    </p>
+
+    <h2 id="en-use">8. Acceptable use</h2>
+    <p>
+      Don't misuse the App: no unlawful use, no attempts to break,
+      resell, or misrepresent it, and no use of the AI features to
+      produce harmful or unlawful content. Third-party AI providers also
+      apply their own usage policies to calls made with your keys.
+    </p>
+
+    <h2 id="en-ip">9. Intellectual property</h2>
+    <p>
+      The App, its designs, and its content (excluding your own data and
+      AI outputs generated for you) remain ours. You get a personal,
+      non-transferable license to use the App on your devices.
+    </p>
+
+    <h2 id="en-liability">10. Disclaimers &amp; liability</h2>
+    <p>
+      The App is provided <strong>"as is"</strong>. To the maximum
+      extent permitted by law, we disclaim warranties and are not liable
+      for indirect or consequential damages, missed prayers or timings,
+      provider costs, or losses arising from AI-generated content.
+      Nothing in these terms limits rights that applicable law gives
+      you.
+    </p>
+
+    <h2 id="en-changes">11. Changes</h2>
+    <p>
+      We may update these terms; the effective date above will change
+      and continued use means acceptance. Material changes will be noted
+      in the App or its store listing.
+    </p>
+
+    <h2 id="en-contact">12. Contact</h2>
+    <p>
+      Questions or concerns:
+      <br>
+      <a href="mailto:ismartest@outlook.com">ismartest@outlook.com</a>
+    </p>
+
+    <p>
+      See also our
+      <a href="https://core2extrem.github.io/athkar-privacy/ios/">Privacy Policy</a>.
+    </p>
+  </div>
+</section>
+
+</body>
+</html>
