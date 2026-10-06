@@ -150,13 +150,14 @@
     <a class="lang-switch" href="#en">English version ↓</a>
 
     <h1>سياسة الخصوصية — اذكاري بريميوم</h1>
-    <p class="meta">آخر تحديث: 4 August 2026</p>
+    <p class="meta">آخر تحديث: 6 October 2026</p>
 
     <div class="toc">
       <strong>المحتويات:</strong>
       <a href="#ar-summary">الخلاصة</a>
       <a href="#ar-local">بياناتك على هاتفك</a>
       <a href="#ar-third-parties">الخدمات الخارجية</a>
+      <a href="#ar-najiz">مساعد ناجز</a>
       <a href="#ar-purchases">المشتريات والاشتراكات</a>
       <a href="#ar-retention">الاحتفاظ بالبيانات</a>
       <a href="#ar-children">خصوصية الأطفال</a>
@@ -266,9 +267,54 @@
           <td>بحث المساعد الذكي عن الأماكن القريبة وعلى الطريق</td>
         </tr>
         <tr>
-          <td><strong>مزوّد المساعد الذكي الذي تختاره</strong><br>DeepSeek · Anthropic (Claude) · OpenAI · xAI (Grok)</td>
+          <td><strong>مزوّد المساعد الذكي الذي تختاره</strong><br>DeepSeek · Anthropic (Claude) · OpenAI · xAI (Grok) · Google (Gemini) · OpenRouter</td>
           <td>اسم مدينتك + إحداثياتك التقريبية (٤ منازل عشرية ≈ ١١ م) ضمن سياق المحادثة، مع رسالتك، وأي صور أو مستندات ترفقها ليقرأها المساعد</td>
           <td>تُرفق مع كل رسالة ترسلها للمساعد ما دام التطبيق يحمل تحديدًا للموقع — إلى المزوّد الواحد الذي يجيبك (وبمفتاحك أنت عند BYOK)</td>
+        </tr>
+        <tr>
+          <td><strong>الوضع الصوتي (المحادثة الصوتية الحية)</strong><br>OpenAI · xAI (Grok) · Google (Gemini Live)</td>
+          <td>صوتك من الميكروفون أثناء جلسة صوتية تبدأها أنت، مع سياق المحادثة</td>
+          <td>محادثة صوتية مع المساعد — إلى المزوّد الذي تختاره عند بدء الجلسة، وبمفتاحك أنت. لا يعمل الميكروفون إلا أثناء الجلسة وبعد إذنك</td>
+        </tr>
+        <tr>
+          <td><strong>الإملاء الصوتي (أندرويد)</strong><br>OpenAI · Google (Gemini) · xAI</td>
+          <td>صوتك أثناء الإملاء فقط</td>
+          <td>تحويل كلامك إلى نص في صندوق الكتابة — عند وجود مفتاح لأحد هذه المزوّدين، وإلا فخدمة التعرّف على الكلام في هاتفك</td>
+        </tr>
+        <tr>
+          <td><strong>القراءة بصوت عالٍ ▶️</strong><br>Google (Gemini)</td>
+          <td>نص الرسالة التي تطلب قراءتها</td>
+          <td>توليد الصوت المقروء — بمفتاحك أنت</td>
+        </tr>
+        <tr>
+          <td><strong>البحث في الإنترنت وقراءة الصفحات</strong><br>Exa · Tavily · Jina Reader · خطوط البحث المدمجة في التطبيق</td>
+          <td>عبارات البحث التي يكتبها المساعد من محادثتك، أو عنوان الصفحة التي يقرؤها</td>
+          <td>إجابات مبنية على مصادر حديثة من الإنترنت</td>
+        </tr>
+        <tr>
+          <td><strong>رفع الملفات — فقط عندما تطلبه</strong><br>litterbox.catbox.moe · catbox.moe · file.io</td>
+          <td>الملف الذي تطلب رفعه</td>
+          <td>إعطاؤك رابطًا للملف. <strong>الرابط عام</strong>: يراه كل من يملكه (litterbox يُحذف بعد ٧٢ ساعة، وcatbox دائم، وfile.io يُحذف بعد أول فتح)، ويذكّرك التطبيق بذلك عند كل رفع</td>
+        </tr>
+        <tr>
+          <td><strong>الطقس</strong><br>api.met.no</td>
+          <td>الإحداثيات (٤ منازل عشرية)</td>
+          <td>عرض حالة الطقس</td>
+        </tr>
+        <tr>
+          <td><strong>خرائط OpenStreetMap</strong><br>tile.openstreetmap.org</td>
+          <td>مربعات الخريطة للمنطقة التي تعرضها</td>
+          <td>رسم خريطة المساجد</td>
+        </tr>
+        <tr>
+          <td><strong>شعارات الجهات في المستندات</strong><br>icons.duckduckgo.com</td>
+          <td>نطاق موقع الجهة (مثل example.com) فقط</td>
+          <td>جلب شعار الجهة عندما يضعه المستند الذي تطلبه</td>
+        </tr>
+        <tr>
+          <td><strong>فتح ملف من Google Drive</strong><br>www.googleapis.com</td>
+          <td>طلب الملف الذي اخترته أنت فقط</td>
+          <td>فتح الملف أو إرفاقه داخل التطبيق (انظر قسم «شيلبي» عن الصلاحية)</td>
         </tr>
       </tbody>
     </table>
@@ -284,7 +330,10 @@
       <li>Masjid Near Me: <a href="https://masjidnear.me/">masjidnear.me</a></li>
       <li>Google Maps: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
       <li>Google Places / Routes: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
-      <li>AI providers: <a href="https://www.deepseek.com/privacy">DeepSeek</a> · <a href="https://www.anthropic.com/privacy">Anthropic</a> · <a href="https://openai.com/privacy">OpenAI</a> · <a href="https://x.ai/legal/privacy-policy">xAI</a></li>
+      <li>AI providers: <a href="https://www.deepseek.com/privacy">DeepSeek</a> · <a href="https://www.anthropic.com/privacy">Anthropic</a> · <a href="https://openai.com/privacy">OpenAI</a> · <a href="https://x.ai/legal/privacy-policy">xAI</a> · <a href="https://policies.google.com/privacy">Google (Gemini)</a> · <a href="https://openrouter.ai/privacy">OpenRouter</a></li>
+      <li>Web search &amp; reading: <a href="https://exa.ai/">Exa</a> · <a href="https://tavily.com/">Tavily</a> · <a href="https://jina.ai/">Jina</a></li>
+      <li>File links: <a href="https://catbox.moe/">catbox.moe / litterbox</a> · <a href="https://www.file.io/">file.io</a></li>
+      <li>Weather: <a href="https://api.met.no/doc/TermsOfService">MET Norway</a> · Logos: <a href="https://duckduckgo.com/privacy">DuckDuckGo</a> · Map tiles: <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy">OpenStreetMap Foundation</a></li>
     </ul>
 
     <h2 id="ar-background">الموقع في الخلفية — فقط إذا فعّلتَ الدقة العالية</h2>
@@ -323,6 +372,25 @@
     </p>
     </ul>
 
+    <h2 id="ar-najiz">مساعد ناجز («أدوات الحاسوب») — ليس جهة حكومية</h2>
+    <p>
+      <strong>تطبيق اذكاري بريميوم تطبيق مستقل، وليس تابعًا لوزارة العدل ولا لمنصة ناجز ولا لنفاذ ولا لأي جهة حكومية،
+      ولا يمثّلها ولا يعمل نيابةً عنها، ولم تعتمده أيٌّ منها.</strong> خدمات ناجز ومعلوماتها مصدرها البوابة الرسمية
+      <a href="https://najiz.sa">najiz.sa</a>.
+    </p>
+    <p>
+      ميزة اختيارية: يفتح التطبيق بوابة ناجز الرسمية داخل متصفح في التطبيق، وتسجّل الدخول عبر نفاذ بنفسك، ثم يساعدك المساعد
+      على التنقل فيها خطوة خطوة. أثناء ذلك:
+    </p>
+    <ul>
+      <li>تُرسَل صور صفحات البوابة — وقد تحتوي تفاصيل قضيتك — إلى مزوّد الذكاء الاصطناعي الذي اخترته وبمفتاحك أنت، ليقرر الخطوة التالية.
+        ومع DeepSeek لا تُرسَل صور إطلاقًا: يُرسَل نص الصفحة فقط، دون قيم خانات الهوية والتواصل، ويذكر DeepSeek أنه يحفظ ما يصله في جمهورية الصين الشعبية.</li>
+      <li>أثناء تسجيل الدخول (نفاذ) يتجمّد كل شيء: لا تُلتقط شاشة الدخول أبدًا، ولا تُرى كلمات المرور أو الرموز المؤقتة ولا تُرسَل.</li>
+      <li>لا يُرسَل أي طلب نهائي إلى المحكمة إلا بعد تأكيدك الصريح.</li>
+      <li>سجل الجلسة (الخطوات والقرارات والإيصالات) يبقى على هاتفك، ولا يغادره إلا مع نسختك الاحتياطية «شيلبي» إن فعّلتها.</li>
+      <li>لا نملك أي خادم يرى هذه الصور أو النصوص.</li>
+    </ul>
+
     <h2 id="ar-drive-backup">النسخ الاحتياطي إلى Google Drive («شيلبي»)</h2>
     <p>
       يقدّم التطبيق ميزة نسخ احتياطي <strong>اختيارية بالكامل</strong> إلى
@@ -339,9 +407,10 @@
         <strong>أين تُخزَّن؟</strong> في مجلد بيانات التطبيقات المخفي
         (appDataFolder) داخل حساب Google Drive <em>الخاص بك أنت</em> —
         لا يستطيع أي تطبيق آخر قراءته، ونحن لا نملك خادماً ولا نرى نسختك
-        الاحتياطية إطلاقاً. صلاحية الوصول الوحيدة التي يطلبها التطبيق هي
+        الاحتياطية إطلاقاً. للنسخ الاحتياطي يطلب التطبيق صلاحية واحدة فقط هي
         نطاق <code>drive.appdata</code> (ملفات التطبيق الخاصة فقط — لا يرى
-        التطبيق ملفاتك الأخرى في Drive أبداً).
+        التطبيق ملفاتك الأخرى في Drive). وإذا اخترتَ فتح ملف من Drive داخل التطبيق،
+        يطلب التطبيق نطاق <code>drive.file</code> الذي لا يتيح له إلا الملفات التي تختارها أنت بنفسك.
       </li>
       <li>
         <strong>متى يعمل تلقائياً؟</strong> بحسب التكرار الذي تختاره —
@@ -433,13 +502,14 @@
     <a class="lang-switch" href="#ar">النسخة العربية ↑</a>
 
     <h1>Privacy Policy — Athkar Premium</h1>
-    <p class="meta">Last updated: 4 August 2026</p>
+    <p class="meta">Last updated: 6 October 2026</p>
 
     <div class="toc">
       <strong>Contents:</strong>
       <a href="#en-summary">Summary</a>
       <a href="#en-local">Data on your phone</a>
       <a href="#en-third-parties">Third-party services</a>
+      <a href="#en-najiz">The Najiz assistant</a>
       <a href="#en-purchases">Purchases & subscriptions</a>
       <a href="#en-retention">Data retention</a>
       <a href="#en-children">Children's privacy</a>
@@ -555,9 +625,54 @@
           <td>The AI assistant's nearby-places and along-route search</td>
         </tr>
         <tr>
-          <td><strong>Your chosen AI assistant provider</strong><br>DeepSeek · Anthropic (Claude) · OpenAI · xAI (Grok)</td>
+          <td><strong>Your chosen AI assistant provider</strong><br>DeepSeek · Anthropic (Claude) · OpenAI · xAI (Grok) · Google (Gemini) · OpenRouter</td>
           <td>Your city name + approximate coordinates (4-decimal, ≈11&nbsp;m) as conversation context, with your message, and any photos or documents you attach for the assistant to read</td>
           <td>Attached to every message you send the assistant while the app holds a location fix — to the one provider answering you (under your own key with BYOK)</td>
+        </tr>
+        <tr>
+          <td><strong>Voice mode (live voice conversation)</strong><br>OpenAI · xAI (Grok) · Google (Gemini Live)</td>
+          <td>Your microphone audio during a voice session you start, with the conversation's context</td>
+          <td>Talking with the assistant — to the provider you pick when the session starts, under your own key. The microphone runs only during the session and only with your permission</td>
+        </tr>
+        <tr>
+          <td><strong>Dictation (Android)</strong><br>OpenAI · Google (Gemini) · xAI</td>
+          <td>Your voice while you dictate, only</td>
+          <td>Turning your speech into text in the message box — when you hold a key for one of these providers; otherwise your phone's own speech service</td>
+        </tr>
+        <tr>
+          <td><strong>Read aloud ▶️</strong><br>Google (Gemini)</td>
+          <td>The text of the message you ask to hear</td>
+          <td>Producing the spoken audio — under your own key</td>
+        </tr>
+        <tr>
+          <td><strong>Web search &amp; page reading</strong><br>Exa · Tavily · Jina Reader · the app's built-in search lines</td>
+          <td>The search phrases the assistant writes from your conversation, or the address of a page it reads</td>
+          <td>Answers grounded in fresh sources from the web</td>
+        </tr>
+        <tr>
+          <td><strong>File upload — only when you ask</strong><br>litterbox.catbox.moe · catbox.moe · file.io</td>
+          <td>The file you ask to upload</td>
+          <td>Giving you a link to the file. <strong>The link is public</strong>: anyone who has it can open it (litterbox deletes it after 72 hours, catbox keeps it, file.io deletes it after the first open), and the app reminds you of this on every upload</td>
+        </tr>
+        <tr>
+          <td><strong>Weather</strong><br>api.met.no</td>
+          <td>Coordinates (4 decimals)</td>
+          <td>Showing the weather</td>
+        </tr>
+        <tr>
+          <td><strong>OpenStreetMap map tiles</strong><br>tile.openstreetmap.org</td>
+          <td>The map squares for the area you are viewing</td>
+          <td>Drawing the mosque map</td>
+        </tr>
+        <tr>
+          <td><strong>Organisation logos in documents</strong><br>icons.duckduckgo.com</td>
+          <td>An organisation's web domain (such as example.com) only</td>
+          <td>Fetching that organisation's logo when a document you ask for shows it</td>
+        </tr>
+        <tr>
+          <td><strong>Opening a file from Google Drive</strong><br>www.googleapis.com</td>
+          <td>The request for the file you picked, only</td>
+          <td>Opening or attaching that file in the app (see the &ldquo;Shelby&rdquo; section for the permission)</td>
         </tr>
       </tbody>
     </table>
@@ -573,7 +688,10 @@
       <li>Masjid Near Me: <a href="https://masjidnear.me/">masjidnear.me</a></li>
       <li>Google Maps: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
       <li>Google Places / Routes: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
-      <li>AI providers: <a href="https://www.deepseek.com/privacy">DeepSeek</a> · <a href="https://www.anthropic.com/privacy">Anthropic</a> · <a href="https://openai.com/privacy">OpenAI</a> · <a href="https://x.ai/legal/privacy-policy">xAI</a></li>
+      <li>AI providers: <a href="https://www.deepseek.com/privacy">DeepSeek</a> · <a href="https://www.anthropic.com/privacy">Anthropic</a> · <a href="https://openai.com/privacy">OpenAI</a> · <a href="https://x.ai/legal/privacy-policy">xAI</a> · <a href="https://policies.google.com/privacy">Google (Gemini)</a> · <a href="https://openrouter.ai/privacy">OpenRouter</a></li>
+      <li>Web search &amp; reading: <a href="https://exa.ai/">Exa</a> · <a href="https://tavily.com/">Tavily</a> · <a href="https://jina.ai/">Jina</a></li>
+      <li>File links: <a href="https://catbox.moe/">catbox.moe / litterbox</a> · <a href="https://www.file.io/">file.io</a></li>
+      <li>Weather: <a href="https://api.met.no/doc/TermsOfService">MET Norway</a> · Logos: <a href="https://duckduckgo.com/privacy">DuckDuckGo</a> · Map tiles: <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy">OpenStreetMap Foundation</a></li>
     </ul>
 
     <h2 id="en-background">Background location — only if YOU enable High-Fidelity</h2>
@@ -596,6 +714,29 @@
     </p>
     </ul>
 
+    <h2 id="en-najiz">The Najiz assistant (&ldquo;Computer Tools&rdquo;) — not a government entity</h2>
+    <p>
+      <strong>Athkar Premium is an independent app. It is not affiliated with, endorsed by, or acting on behalf of the
+      Saudi Ministry of Justice, Najiz, Nafath, or any government entity.</strong> Najiz services and information come
+      from the official portal <a href="https://najiz.sa">najiz.sa</a>.
+    </p>
+    <p>
+      An optional feature: the app opens the official Najiz portal in an in-app browser, you sign in through Nafath
+      yourself, and the assistant helps you move through it step by step. While it does:
+    </p>
+    <ul>
+      <li>Screenshots of the portal's pages — which may include your case details — are sent to the AI provider you
+        chose, under your own key, so it can decide the next step. With DeepSeek no screenshot is ever sent: only the
+        page's text, without the values in identity and contact fields; DeepSeek says it stores what it receives in the
+        People's Republic of China.</li>
+      <li>During login (Nafath) everything freezes: the login screen is never captured, and passwords and one-time codes
+        are never seen or sent.</li>
+      <li>No final submission to the court is sent without your explicit confirmation.</li>
+      <li>The session's record (steps, decisions, receipts) stays on your phone and leaves it only with your own
+        &ldquo;Shelby&rdquo; backup, if you turned it on.</li>
+      <li>We run no server that sees these screenshots or texts.</li>
+    </ul>
+
     <h2 id="en-drive-backup">Google Drive backup (&ldquo;Shelby&rdquo;)</h2>
     <p>
       The app offers an <strong>entirely optional</strong> backup to Google
@@ -613,9 +754,11 @@
         <strong>Where is it stored?</strong> In the hidden app-data folder
         (appDataFolder) of <em>your own</em> Google Drive account. No other
         app can read it, and we operate no server and never see your backup.
-        The only permission the app requests is the
+        For the backup, the app requests one permission only: the
         <code>drive.appdata</code> scope (the app's own private files only —
-        it can never see your other Drive files).
+        it cannot see your other Drive files). If you choose to open a file
+        from Drive inside the app, it asks for the <code>drive.file</code>
+        scope, which reaches only the files you pick yourself.
       </li>
       <li>
         <strong>When does it run automatically?</strong> At the frequency you
