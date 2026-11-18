@@ -34,9 +34,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>سياسة الخصوصية — اذكاري بريميوم / Privacy Policy — Athkar Premium</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       color-scheme: light dark;
@@ -59,7 +56,8 @@
     }
     * { box-sizing: border-box; }
     /* The Arabic text in IBM Plex Sans Arabic (28 Oct 2026): crisp and even on a phone, and its own Latin matches the
-       English names inside the Arabic (Chrome, Google, DeepSeek). */
+       English names inside the Arabic (Chrome, Google, DeepSeek). 18 Nov 2026: the Google Fonts link is removed (no
+       third-party font on a privacy page); the list below falls back to the phone's own Arabic font. */
     #ar { font-family: "IBM Plex Sans Arabic", "Noto Sans Arabic", Tahoma, sans-serif; line-height: 1.85; }
     /* Tables keep the page inside a phone's width: long service names wrap instead of pushing the page sideways (on a
        400 px screen the English table made the page 452 px and slid the Arabic column off the edge). */
@@ -160,7 +158,7 @@
     <a class="lang-switch" href="#en">English version ↓</a>
 
     <h1>سياسة الخصوصية — اذكاري بريميوم</h1>
-    <p class="meta">آخر تحديث: 28 October 2026</p>
+    <p class="meta">آخر تحديث: 18 November 2026</p>
 
     <div class="toc">
       <strong>المحتويات:</strong>
@@ -247,7 +245,7 @@
           <td><strong>TomTom Search</strong><br>api.tomtom.com</td>
           <td>الإحداثيات + نطاق البحث</td>
           <td>المصدر الأساسي للبحث عن المساجد القريبة (يوفر أسماء مساجد
-              دقيقة بالعربية والإنجليزية)</td>
+              دقيقة بالعربية والإنجليزية)، ومصدر لاسم الحي والمدينة في زر الموقع</td>
         </tr>
         <tr>
           <td><strong>OpenStreetMap Overpass</strong><br>overpass-api.de</td>
@@ -258,7 +256,7 @@
           <td><strong>OpenStreetMap Nominatim</strong><br>nominatim.openstreetmap.org</td>
           <td>الإحداثيات</td>
           <td>الحصول على اسم الشارع أو الحي كدليل تقريبي للمساجد التي لا
-              يحمل سجلها على OpenStreetMap اسماً</td>
+              يحمل سجلها على OpenStreetMap اسماً، ومصدر لاسم الحي والمدينة في زر الموقع</td>
         </tr>
         <tr>
           <td><strong>Masjid Near Me</strong><br>api.masjidnear.me</td>
@@ -282,6 +280,11 @@
           <td>تُرفق مع كل رسالة ترسلها للمساعد ما دام التطبيق يحمل تحديدًا للموقع — إلى المزوّد الواحد الذي يجيبك (وبمفتاحك أنت عند BYOK)</td>
         </tr>
         <tr>
+          <td><strong>«غرفة التخصيص» - فقط إذا فعّلتَ التخصيص</strong><br>مزوّد المساعد الذكي الذي اخترته</td>
+          <td>ما حفظه المستشار عنك في الغرفة كما هو: ما أخبرته به (مثل اسمك وعملك وعائلتك وصحتك)، وإن اخترتَ المستوى الأعمق فاستنتاجاته أيضًا</td>
+          <td>يُرسَل مع كل رسالة، وعند بدء الجلسة الصوتية، إلى المزوّد الذي يجيبك لتناسبك إجاباته. التخصيص مطفأ افتراضياً ولا يعمل في المحادثة المؤقتة، ويمكنك رؤية ما في الغرفة وتعديله ومسحه في أي وقت</td>
+        </tr>
+        <tr>
           <td><strong>الوضع الصوتي (المحادثة الصوتية الحية)</strong><br>OpenAI · xAI (Grok) · Google (Gemini Live)</td>
           <td>صوتك من الميكروفون أثناء جلسة صوتية تبدأها أنت، مع سياق المحادثة</td>
           <td>محادثة صوتية مع المساعد — إلى المزوّد الذي تختاره عند بدء الجلسة، وبمفتاحك أنت. لا يعمل الميكروفون إلا أثناء الجلسة وبعد إذنك</td>
@@ -302,9 +305,9 @@
           <td>إجابات مبنية على مصادر حديثة من الإنترنت</td>
         </tr>
         <tr>
-          <td><strong>رفع الملفات — فقط عندما تطلبه</strong><br>litterbox.catbox.moe · catbox.moe · file.io</td>
+          <td><strong>رفع الملفات — فقط عندما تطلبه</strong><br>litterbox.catbox.moe · catbox.moe · temp.sh · tmpfiles.org · tmpfile.link · x0.at</td>
           <td>الملف الذي تطلب رفعه</td>
-          <td>إعطاؤك رابطًا للملف. <strong>الرابط عام</strong>: يراه كل من يملكه (litterbox يُحذف بعد ٧٢ ساعة، وcatbox دائم، وfile.io يُحذف بعد أول فتح)، ويذكّرك التطبيق بذلك عند كل رفع</td>
+          <td>إعطاؤك رابطًا للملف. <strong>الرابط عام</strong>: يراه كل من يملكه. ومدة بقائه بحسب الموقع: litterbox ساعة أو ٧٢ ساعة، وtmpfiles.org ساعة أو ٤٨ ساعة، وtemp.sh ثلاثة أيام، وtmpfile.link سبعة أيام، وx0.at من ٣ إلى ١٠٠ يوم (الملف الأصغر يبقى أطول)، وcatbox دائم. وقبل أي رفع يذكر لك التطبيق اسم الملف والموقع ويذكّرك بأن الرابط عام، ولا يُرسَل شيء إلا بموافقتك</td>
         </tr>
         <tr>
           <td><strong>الطقس</strong><br>api.met.no</td>
@@ -317,14 +320,19 @@
           <td>رسم خريطة المساجد</td>
         </tr>
         <tr>
-          <td><strong>شعارات الجهات في المستندات</strong><br>icons.duckduckgo.com</td>
+          <td><strong>شعارات الجهات في المستندات</strong><br>icons.duckduckgo.com · www.google.com/s2/favicons</td>
           <td>نطاق موقع الجهة (مثل example.com) فقط</td>
-          <td>جلب شعار الجهة عندما يضعه المستند الذي تطلبه</td>
+          <td>جلب شعار الجهة عندما يضعه المستند الذي تطلبه (ومن Google إن لم يجده DuckDuckGo)</td>
         </tr>
         <tr>
           <td><strong>فتح ملف من Google Drive</strong><br>www.googleapis.com</td>
           <td>طلب الملف الذي اخترته أنت فقط</td>
           <td>فتح الملف أو إرفاقه داخل التطبيق (انظر قسم «شيلبي» عن الصلاحية)</td>
+        </tr>
+        <tr>
+          <td><strong>الحفظ في Google Drive الخاص بك - فقط عندما تطلبه</strong><br>www.googleapis.com</td>
+          <td>الملف الذي تطلب حفظه فقط</td>
+          <td>حفظ نسخة منه في مجلد «Athkar» في Google Drive الخاص بك بنطاق <code>drive.file</code> (يطلب Google موافقتك مرة واحدة)، أو وضعه في ملف على Drive تختاره أنت بنفسك من منتقي Google. ولا يرى التطبيق أي ملف آخر لك في Drive</td>
         </tr>
       </tbody>
     </table>
@@ -342,8 +350,9 @@
       <li>Google Places / Routes: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
       <li>AI providers: <a href="https://www.deepseek.com/privacy">DeepSeek</a> · <a href="https://www.anthropic.com/privacy">Anthropic</a> · <a href="https://openai.com/privacy">OpenAI</a> · <a href="https://x.ai/legal/privacy-policy">xAI</a> · <a href="https://policies.google.com/privacy">Google (Gemini)</a> · <a href="https://openrouter.ai/privacy">OpenRouter</a></li>
       <li>Web search &amp; reading: <a href="https://exa.ai/">Exa</a> · <a href="https://tavily.com/">Tavily</a> · <a href="https://parallel.ai/">Parallel</a> · <a href="https://www.firecrawl.dev/">Firecrawl</a> · <a href="https://jina.ai/">Jina</a></li>
-      <li>File links: <a href="https://catbox.moe/">catbox.moe / litterbox</a> · <a href="https://www.file.io/">file.io</a></li>
-      <li>Weather: <a href="https://api.met.no/doc/TermsOfService">MET Norway</a> · Logos: <a href="https://duckduckgo.com/privacy">DuckDuckGo</a> · Map tiles: <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy">OpenStreetMap Foundation</a></li>
+      <li>File links: <a href="https://catbox.moe/">catbox.moe / litterbox</a> · <a href="https://temp.sh/">temp.sh</a> · <a href="https://tmpfiles.org/">tmpfiles.org</a> · <a href="https://tmpfile.link/">tmpfile.link</a> · <a href="https://x0.at/">x0.at</a></li>
+      <li>Weather: <a href="https://api.met.no/doc/TermsOfService">MET Norway</a> · Logos: <a href="https://duckduckgo.com/privacy">DuckDuckGo</a> · <a href="https://policies.google.com/privacy">Google</a> · Map tiles: <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy">OpenStreetMap Foundation</a></li>
+      <li>Your own cloud: <a href="https://policies.google.com/privacy">Google Drive</a></li>
     </ul>
 
     <h2 id="ar-background">الموقع في الخلفية — فقط إذا فعّلتَ الدقة العالية</h2>
@@ -402,6 +411,10 @@
       <li>لا نملك أي خادم يرى هذه الصور أو النصوص.</li>
     </ul>
     <p>
+      ويمكن للمساعد على هاتفك بالطريقة نفسها أن يقود أي موقع آخر تطلبه؛ وكل موقع جديد يُسأل عنه أولًا، وتُرسَل صور صفحاته
+      ونصها إلى المزوّد الذي اخترته كما سبق، وتسجيل الدخول فيه بيدك أنت.
+    </p>
+    <p>
       <strong>على الحاسوب (إضافة المتصفح الاختيارية «Athkar Walker — Computer Hands»):</strong> إن اخترت أن تُفتح
       ناجز في متصفح Chrome أو Edge على حاسوبك، فالإضافة لا تعمل إلا على najiz.sa وnafath.sa وmoj.gov.sa، وترسل صور
       الصفحة ونصّها (قائمة الأزرار والخانات الظاهرة)، وأي ملف تنزّله الصفحة أثناء القيادة، إلى هاتفك وحده عبر شبكتك المحلية، باتصال مشفّر بين جهازيك لا يمرّ بأي خادم. تحفظ على الحاسوب هوية الاقتران
@@ -419,8 +432,14 @@
     <ul>
       <li>
         <strong>ماذا يُنسَخ؟</strong> مكتبة مستنداتك المُنشأة داخل التطبيق
-        (التقارير والسير الذاتية وفهارسها)، وبموافقتين منفصلتين اختياريتين
-        (مطفأتان افتراضياً): سجل محادثات «المستشار»، ومفاتيح API التي أدخلتها.
+        (التقارير والسير الذاتية وفهارسها)، وبموافقات منفصلة اختيارية
+        (مطفأة افتراضياً): سجل محادثات «المستشار»، ومفاتيح API التي أدخلتها،
+        و«غرفة التخصيص» (ما يحفظه المستشار عنك على جهازك)، والفيديوهات المولّدة
+        في محادثاتك (مع سجل المحادثات فقط)، و«رسائل أدوات الحاسوب» (سطورك للمساعد
+        أثناء قيادته لموقع وردوده، وقد تحمل تفاصيل قضيتك؛ وبدون هذا الخيار تُستبعَد
+        من النسخة كلها، حتى من سجل الجلسة). وما في «غرفة التخصيص» يُرسَل أيضًا
+        إلى مزوّد الذكاء الاصطناعي الذي اخترته مع كل رسالة، كتابةً أو صوتًا، ما
+        دام التخصيص مفعّلًا (وهو مطفأ افتراضياً)؛ انظر جدول الخدمات أعلاه.
       </li>
       <li>
         <strong>أين تُخزَّن؟</strong> في مجلد بيانات التطبيقات المخفي
@@ -521,7 +540,7 @@
     <a class="lang-switch" href="#ar">النسخة العربية ↑</a>
 
     <h1>Privacy Policy — Athkar Premium</h1>
-    <p class="meta">Last updated: 28 October 2026</p>
+    <p class="meta">Last updated: 18 November 2026</p>
 
     <div class="toc">
       <strong>Contents:</strong>
@@ -612,7 +631,8 @@
           <td><strong>TomTom Search</strong><br>api.tomtom.com</td>
           <td>Coordinates + search radius</td>
           <td>Primary source for nearby-mosque search (provides accurate
-              mosque names in Arabic and English)</td>
+              mosque names in Arabic and English), and a source of the district
+              and city name for the location pill</td>
         </tr>
         <tr>
           <td><strong>OpenStreetMap Overpass</strong><br>overpass-api.de</td>
@@ -624,7 +644,8 @@
           <td><strong>OpenStreetMap Nominatim</strong><br>nominatim.openstreetmap.org</td>
           <td>Coordinates</td>
           <td>Get a nearest-road / district name as a hint for mosques
-              that have no name on OpenStreetMap</td>
+              that have no name on OpenStreetMap, and a source of the district
+              and city name for the location pill</td>
         </tr>
         <tr>
           <td><strong>Masjid Near Me</strong><br>api.masjidnear.me</td>
@@ -649,6 +670,11 @@
           <td>Attached to every message you send the assistant while the app holds a location fix — to the one provider answering you (under your own key with BYOK)</td>
         </tr>
         <tr>
+          <td><strong>Your Personalisation Room - only if you turn Personalisation on</strong><br>The AI provider you chose</td>
+          <td>What the Consultant has saved about you in the Room, word for word: the things you told it (such as your name, work, family or health) and, if you chose the deeper setting, its own inferences</td>
+          <td>Sent with every message, and at the start of a voice session, to the provider answering you, so its answers fit you. Personalisation is off by default and never runs in a temporary chat; you can see, edit or wipe the Room at any time</td>
+        </tr>
+        <tr>
           <td><strong>Voice mode (live voice conversation)</strong><br>OpenAI · xAI (Grok) · Google (Gemini Live)</td>
           <td>Your microphone audio during a voice session you start, with the conversation's context</td>
           <td>Talking with the assistant — to the provider you pick when the session starts, under your own key. The microphone runs only during the session and only with your permission</td>
@@ -669,9 +695,9 @@
           <td>Answers grounded in fresh sources from the web</td>
         </tr>
         <tr>
-          <td><strong>File upload — only when you ask</strong><br>litterbox.catbox.moe · catbox.moe · file.io</td>
+          <td><strong>File upload — only when you ask</strong><br>litterbox.catbox.moe · catbox.moe · temp.sh · tmpfiles.org · tmpfile.link · x0.at</td>
           <td>The file you ask to upload</td>
-          <td>Giving you a link to the file. <strong>The link is public</strong>: anyone who has it can open it (litterbox deletes it after 72 hours, catbox keeps it, file.io deletes it after the first open), and the app reminds you of this on every upload</td>
+          <td>Giving you a link to the file. <strong>The link is public</strong>: anyone who has it can open it. How long it stays depends on the site: litterbox 1 hour or 72 hours, tmpfiles.org 1 hour or 48 hours, temp.sh 3 days, tmpfile.link 7 days, x0.at 3 to 100 days (smaller files longer), catbox keeps it. Before any upload the app names the file and the site and reminds you that the link is public, and nothing is sent until you agree</td>
         </tr>
         <tr>
           <td><strong>Weather</strong><br>api.met.no</td>
@@ -684,14 +710,19 @@
           <td>Drawing the mosque map</td>
         </tr>
         <tr>
-          <td><strong>Organisation logos in documents</strong><br>icons.duckduckgo.com</td>
+          <td><strong>Organisation logos in documents</strong><br>icons.duckduckgo.com · www.google.com/s2/favicons</td>
           <td>An organisation's web domain (such as example.com) only</td>
-          <td>Fetching that organisation's logo when a document you ask for shows it</td>
+          <td>Fetching that organisation's logo when a document you ask for shows it (from Google when DuckDuckGo has none)</td>
         </tr>
         <tr>
           <td><strong>Opening a file from Google Drive</strong><br>www.googleapis.com</td>
           <td>The request for the file you picked, only</td>
           <td>Opening or attaching that file in the app (see the &ldquo;Shelby&rdquo; section for the permission)</td>
+        </tr>
+        <tr>
+          <td><strong>Saving to your own Google Drive - only when you ask</strong><br>www.googleapis.com</td>
+          <td>Only the file you ask to save</td>
+          <td>Saving a copy in an &ldquo;Athkar&rdquo; folder in your own Google Drive under the <code>drive.file</code> scope (Google asks your consent once), or putting it into a Drive file you pick yourself in Google's picker. The app sees none of your other Drive files</td>
         </tr>
       </tbody>
     </table>
@@ -709,8 +740,9 @@
       <li>Google Places / Routes: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
       <li>AI providers: <a href="https://www.deepseek.com/privacy">DeepSeek</a> · <a href="https://www.anthropic.com/privacy">Anthropic</a> · <a href="https://openai.com/privacy">OpenAI</a> · <a href="https://x.ai/legal/privacy-policy">xAI</a> · <a href="https://policies.google.com/privacy">Google (Gemini)</a> · <a href="https://openrouter.ai/privacy">OpenRouter</a></li>
       <li>Web search &amp; reading: <a href="https://exa.ai/">Exa</a> · <a href="https://tavily.com/">Tavily</a> · <a href="https://parallel.ai/">Parallel</a> · <a href="https://www.firecrawl.dev/">Firecrawl</a> · <a href="https://jina.ai/">Jina</a></li>
-      <li>File links: <a href="https://catbox.moe/">catbox.moe / litterbox</a> · <a href="https://www.file.io/">file.io</a></li>
-      <li>Weather: <a href="https://api.met.no/doc/TermsOfService">MET Norway</a> · Logos: <a href="https://duckduckgo.com/privacy">DuckDuckGo</a> · Map tiles: <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy">OpenStreetMap Foundation</a></li>
+      <li>File links: <a href="https://catbox.moe/">catbox.moe / litterbox</a> · <a href="https://temp.sh/">temp.sh</a> · <a href="https://tmpfiles.org/">tmpfiles.org</a> · <a href="https://tmpfile.link/">tmpfile.link</a> · <a href="https://x0.at/">x0.at</a></li>
+      <li>Weather: <a href="https://api.met.no/doc/TermsOfService">MET Norway</a> · Logos: <a href="https://duckduckgo.com/privacy">DuckDuckGo</a> · <a href="https://policies.google.com/privacy">Google</a> · Map tiles: <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy">OpenStreetMap Foundation</a></li>
+      <li>Your own cloud: <a href="https://policies.google.com/privacy">Google Drive</a></li>
     </ul>
 
     <h2 id="en-background">Background location — only if YOU enable High-Fidelity</h2>
@@ -763,6 +795,11 @@
       <li>We run no server that sees these screenshots or texts.</li>
     </ul>
     <p>
+      In the same way, on your phone, the assistant can drive any other website you ask for; each new site asks you
+      first, its pages' screenshots and text go to the provider you chose as above, and signing in there stays in your
+      hands.
+    </p>
+    <p>
       <strong>On the computer (the optional browser extension &ldquo;Athkar Walker — Computer Hands&rdquo;):</strong> if you
       choose to open Najiz in Chrome or Edge on your computer, the extension works only on najiz.sa, nafath.sa and
       moj.gov.sa, and sends the page's screenshots and its text (the list of visible buttons and fields), and any file the page
@@ -783,9 +820,17 @@
     <ul>
       <li>
         <strong>What is backed up?</strong> Your in-app document library
-        (reports, CVs and their indexes), and — behind two separate opt-ins,
-        both OFF by default — your Consultant chat history and the API keys
-        you entered.
+        (reports, CVs and their indexes), and, behind separate opt-ins, all
+        OFF by default, your Consultant chat history, the API keys you
+        entered, your Personalisation Room (what the Consultant keeps about
+        you on your device), the videos generated in your chats (only
+        together with the chat history) and your Computer Tools talk lines
+        (your lines to the assistant while it drives a site, and its replies,
+        which may hold case details; without this switch they are left out of
+        the backup, even from the session's record). What is in the Personalisation Room
+        is also sent to the AI provider you chose with every message, typed or
+        spoken, while Personalisation is on (it is off by default); see the
+        services table above.
       </li>
       <li>
         <strong>Where is it stored?</strong> In the hidden app-data folder

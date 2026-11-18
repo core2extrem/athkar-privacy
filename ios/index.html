@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--
-  Athkari Premium: Prayer Times — Privacy Policy (bilingual: AR + EN)
-  ── THE iOS / APPLE APP STORE EDITION ──────────────────────────────────
+  Athkari Premium: Prayer Times, Privacy Policy (bilingual: AR + EN)
+  THE iOS / APPLE APP STORE EDITION
 
   WHY A SEPARATE PAGE (owner's ruling, 2026-07-30):
     The Android policy at /athkar-privacy/ is LIVE and Play-approved
@@ -9,30 +9,44 @@
     This file is its iOS twin, living at /athkar-privacy/ios/ so the two
     stores can never disturb one another.
 
-  WHAT DIFFERS FROM THE ANDROID PAGE (and ONLY this):
-    · brand name        → "Athkari Premium: Prayer Times" (the App Store
+  WHAT DIFFERS FROM THE ANDROID PAGE (brought up to date 18 November 2026):
+    · brand name        "Athkari Premium: Prayer Times" (the App Store
                           name; the Arabic name اذكاري بريميوم is the
                           same on both stores)
-    · store of record   → Apple App Store, not Google Play
-    · billing           → Apple App Store in-app purchase (+ RevenueCat),
+    · store of record   Apple App Store, not Google Play
+    · billing           Apple App Store in-app purchase (+ RevenueCat),
                           with Apple's privacy link in place of Google's
-    · delete-your-data  → iOS paths (delete the app; Settings → Privacy &
-                          Security → Location Services; Settings → your
-                          name → Subscriptions)
-    · Last updated      → 30 July 2026
-    Everything else — identity, retention, security, the AI-provider
-    table, attachments, children's privacy — is IDENTICAL by design.
+    · delete-your-data  iOS paths (delete the app; Settings, Privacy &
+                          Security, Location Services; Settings, your
+                          name, Subscriptions)
+    · directions        a mosque's directions open Apple Maps
+                          (maps.apple.com); Google Maps only for the
+                          assistant's place cards and a Google-only
+                          mosque list
+    · no dictation row  the dictation mic is Android-only
+    · no computer       the computer extension (Door B) and its push
+      extension           wake are Android-only
+    · the backup        «Shelby» lives in iCloud by default on the
+                          iPhone, Google Drive by choice
+    · background        no persistent notification and no fixed 12:01 AM
+      location            refresh on the iPhone (iOS wakes the app itself)
+    · own cloud         saving to iCloud Drive is iPhone-only
+    · Settings name     the app shows as «أذكاري» in iPhone Settings
+    · fonts             no web font (no Google Fonts on either page)
+    · Last updated      18 November 2026
+    Everything else (identity, retention, security, the AI-provider
+    table, attachments, children's privacy) follows the Android page.
 
   WHERE IT IS USED:
-    App Store Connect → App Privacy → Privacy Policy URL, per language:
-      Arabic       → https://core2extrem.github.io/athkar-privacy/ios/#ar
-      English (US) → https://core2extrem.github.io/athkar-privacy/ios/#en
+    App Store Connect, App Privacy, Privacy Policy URL, per language:
+      Arabic       https://core2extrem.github.io/athkar-privacy/ios/#ar
+      English (US) https://core2extrem.github.io/athkar-privacy/ios/#en
 
   HOW TO UPDATE LATER:
     Edit this file in the GitHub repo (pencil icon, commit). The Pages
     site refreshes in a minute or two. Bump the "Last updated" date in
     BOTH the Arabic and the English sections. Editing this file can
-    never affect the Android policy — they are separate documents.
+    never affect the Android policy: they are separate documents.
 -->
 <html lang="ar" dir="rtl">
 <head>
@@ -60,6 +74,10 @@
       }
     }
     * { box-sizing: border-box; }
+    /* Tables keep the page inside a phone's width (from the Android page, 28 Oct 2026): long service names wrap
+       instead of pushing the page sideways. */
+    table { width: 100%; table-layout: fixed; }
+    th, td { overflow-wrap: anywhere; }
     html, body { margin: 0; padding: 0; }
     body {
       background: var(--bg);
@@ -148,20 +166,22 @@
 <body>
 
 <!-- ================================================================
-     ARABIC SECTION (default — page opens here)
+     ARABIC SECTION (default: the page opens here)
      ================================================================ -->
 <section id="ar" dir="rtl" lang="ar">
   <div class="wrap">
     <a class="lang-switch" href="#en">English version ↓</a>
 
     <h1>سياسة الخصوصية — اذكاري بريميوم</h1>
-    <p class="meta">آخر تحديث: 30 July 2026</p>
+    <p class="meta">آخر تحديث: 18 November 2026</p>
 
     <div class="toc">
       <strong>المحتويات:</strong>
       <a href="#ar-summary">الخلاصة</a>
       <a href="#ar-local">بياناتك على هاتفك</a>
       <a href="#ar-third-parties">الخدمات الخارجية</a>
+      <a href="#ar-najiz">مساعد ناجز</a>
+      <a href="#ar-drive-backup">النسخ الاحتياطي</a>
       <a href="#ar-purchases">المشتريات والاشتراكات</a>
       <a href="#ar-retention">الاحتفاظ بالبيانات</a>
       <a href="#ar-children">خصوصية الأطفال</a>
@@ -241,7 +261,7 @@
           <td><strong>TomTom Search</strong><br>api.tomtom.com</td>
           <td>الإحداثيات + نطاق البحث</td>
           <td>المصدر الأساسي للبحث عن المساجد القريبة (يوفر أسماء مساجد
-              دقيقة بالعربية والإنجليزية)</td>
+              دقيقة بالعربية والإنجليزية)، ومصدر لاسم الحي والمدينة في زر الموقع</td>
         </tr>
         <tr>
           <td><strong>OpenStreetMap Overpass</strong><br>overpass-api.de</td>
@@ -252,7 +272,7 @@
           <td><strong>OpenStreetMap Nominatim</strong><br>nominatim.openstreetmap.org</td>
           <td>الإحداثيات</td>
           <td>الحصول على اسم الشارع أو الحي كدليل تقريبي للمساجد التي لا
-              يحمل سجلها على OpenStreetMap اسماً</td>
+              يحمل سجلها على OpenStreetMap اسماً، ومصدر لاسم الحي والمدينة في زر الموقع</td>
         </tr>
         <tr>
           <td><strong>Masjid Near Me</strong><br>api.masjidnear.me</td>
@@ -261,19 +281,74 @@
               TomTom ومن OpenStreetMap</td>
         </tr>
         <tr>
+          <td><strong>Apple Maps</strong><br>maps.apple.com</td>
+          <td>إحداثيات الوجهة، أو اسم المكان حين لا تُعرف إحداثياته</td>
+          <td>فتح مسار القيادة في تطبيق Apple Maps حين تطلب الاتجاهات إلى مسجد أو مكان</td>
+        </tr>
+        <tr>
           <td><strong>Google Maps</strong><br>google.com/maps</td>
-          <td>إحداثيات الوجهة + اسم المسجد</td>
-          <td>فتح مسار قيادة داخل التطبيق عند الضغط على مسجد</td>
+          <td>إحداثيات المكان واسمه حين تضغط بطاقة مكان يعرضها المساعد، أو كلمة «مسجد» وحدها حين تكون كل المساجد القريبة التي وُجدت من Google</td>
+          <td>فتح الاتجاهات أو البحث في الخريطة على Google Maps</td>
         </tr>
         <tr>
           <td><strong>Google (الأماكن / المسارات)</strong><br>places.googleapis.com · routes.googleapis.com</td>
-          <td>الإحداثيات + نص البحث (ومسارك عند طلب أماكن «في طريقي»)</td>
-          <td>بحث المساعد الذكي عن الأماكن القريبة وعلى الطريق</td>
+          <td>الإحداثيات + نص البحث أو نطاق البحث عن المساجد (ومسارك عند طلب أماكن «في طريقي»)</td>
+          <td>بحث المساعد الذكي عن الأماكن القريبة وعلى الطريق، ومصدر إضافي لأقرب المساجد حين تقلّ نتائج المصادر الأخرى</td>
         </tr>
         <tr>
-          <td><strong>مزوّد المساعد الذكي الذي تختاره</strong><br>DeepSeek · Anthropic (Claude) · OpenAI · xAI (Grok)</td>
+          <td><strong>مزوّد المساعد الذكي الذي تختاره</strong><br>DeepSeek · Anthropic (Claude) · OpenAI · xAI (Grok) · Google (Gemini) · OpenRouter</td>
           <td>اسم مدينتك + إحداثياتك التقريبية (٤ منازل عشرية ≈ ١١ م) ضمن سياق المحادثة، مع رسالتك، وأي صور أو مستندات ترفقها ليقرأها المساعد</td>
           <td>تُرفق مع كل رسالة ترسلها للمساعد ما دام التطبيق يحمل تحديدًا للموقع — إلى المزوّد الواحد الذي يجيبك (وبمفتاحك أنت عند BYOK)</td>
+        </tr>
+        <tr>
+          <td><strong>«غرفة التخصيص» - فقط إذا فعّلتَ التخصيص</strong><br>مزوّد المساعد الذكي الذي اخترته</td>
+          <td>ما حفظه المستشار عنك في الغرفة كما هو: ما أخبرته به (مثل اسمك وعملك وعائلتك وصحتك)، وإن اخترتَ المستوى الأعمق فاستنتاجاته أيضًا</td>
+          <td>يُرسَل مع كل رسالة، وعند بدء الجلسة الصوتية، إلى المزوّد الذي يجيبك لتناسبك إجاباته. التخصيص مطفأ افتراضياً ولا يعمل في المحادثة المؤقتة، ويمكنك رؤية ما في الغرفة وتعديله ومسحه في أي وقت</td>
+        </tr>
+        <tr>
+          <td><strong>الوضع الصوتي (المحادثة الصوتية الحية)</strong><br>OpenAI · xAI (Grok) · Google (Gemini Live)</td>
+          <td>صوتك من الميكروفون أثناء جلسة صوتية تبدأها أنت، مع سياق المحادثة</td>
+          <td>محادثة صوتية مع المساعد، إلى المزوّد الذي تختاره عند بدء الجلسة، وبمفتاحك أنت. لا يعمل الميكروفون إلا أثناء الجلسة وبعد إذنك</td>
+        </tr>
+        <tr>
+          <td><strong>القراءة بصوت عالٍ ▶️</strong><br>Google (Gemini)</td>
+          <td>نص الرسالة التي تطلب قراءتها</td>
+          <td>توليد الصوت المقروء، بمفتاحك أنت</td>
+        </tr>
+        <tr>
+          <td><strong>البحث في الإنترنت وقراءة الصفحات</strong><br>Exa · Tavily · Parallel · Firecrawl · Jina Reader · خطوط البحث المدمجة في التطبيق</td>
+          <td>عبارات البحث التي يكتبها المساعد من محادثتك، أو عنوان الصفحة التي يقرؤها</td>
+          <td>إجابات مبنية على مصادر حديثة من الإنترنت</td>
+        </tr>
+        <tr>
+          <td><strong>رفع الملفات - فقط عندما تطلبه</strong><br>litterbox.catbox.moe · catbox.moe · temp.sh · tmpfiles.org · tmpfile.link · x0.at</td>
+          <td>الملف الذي تطلب رفعه</td>
+          <td>إعطاؤك رابطًا للملف. <strong>الرابط عام</strong>: يراه كل من يملكه. ومدة بقائه بحسب الموقع: litterbox ساعة أو ٧٢ ساعة، وtmpfiles.org ساعة أو ٤٨ ساعة، وtemp.sh ثلاثة أيام، وtmpfile.link سبعة أيام، وx0.at من ٣ إلى ١٠٠ يوم (الملف الأصغر يبقى أطول)، وcatbox دائم. وقبل أي رفع يذكر لك التطبيق اسم الملف والموقع ويذكّرك بأن الرابط عام، ولا يُرسَل شيء إلا بموافقتك</td>
+        </tr>
+        <tr>
+          <td><strong>الطقس</strong><br>api.met.no</td>
+          <td>الإحداثيات (٤ منازل عشرية)</td>
+          <td>عرض حالة الطقس</td>
+        </tr>
+        <tr>
+          <td><strong>خرائط OpenStreetMap</strong><br>tile.openstreetmap.org</td>
+          <td>مربعات الخريطة للمنطقة التي تعرضها</td>
+          <td>رسم خريطة المساجد</td>
+        </tr>
+        <tr>
+          <td><strong>شعارات الجهات في المستندات</strong><br>icons.duckduckgo.com · www.google.com/s2/favicons</td>
+          <td>نطاق موقع الجهة (مثل example.com) فقط</td>
+          <td>جلب شعار الجهة عندما يضعه المستند الذي تطلبه (ومن Google إن لم يجده DuckDuckGo)</td>
+        </tr>
+        <tr>
+          <td><strong>فتح ملف من Google Drive</strong><br>www.googleapis.com</td>
+          <td>طلب الملف الذي اخترته أنت فقط</td>
+          <td>فتح الملف أو إرفاقه داخل التطبيق (انظر قسم «شيلبي» عن الصلاحية)</td>
+        </tr>
+        <tr>
+          <td><strong>الحفظ في سحابتك - فقط عندما تطلبه</strong><br>iCloud Drive · Google Drive (www.googleapis.com)</td>
+          <td>الملف الذي تطلب حفظه فقط</td>
+          <td>حفظ نسخة منه في مجلد «Athkar» في iCloud Drive الخاص بك، أو في مجلد «Athkar» في Google Drive الخاص بك بنطاق <code>drive.file</code> (يطلب Google موافقتك مرة واحدة)، أو وضعه في ملف على Drive تختاره أنت بنفسك من منتقي Google. ولا يرى التطبيق أي ملف آخر لك في Drive</td>
         </tr>
       </tbody>
     </table>
@@ -287,45 +362,110 @@
       <li>TomTom: <a href="https://www.tomtom.com/privacy/">tomtom.com/privacy</a></li>
       <li>OpenStreetMap Foundation (Overpass + Nominatim): <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy">osmfoundation.org Privacy Policy</a></li>
       <li>Masjid Near Me: <a href="https://masjidnear.me/">masjidnear.me</a></li>
+      <li>Apple Maps: <a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a></li>
       <li>Google Maps: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
       <li>Google Places / Routes: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
-      <li>AI providers: <a href="https://www.deepseek.com/privacy">DeepSeek</a> · <a href="https://www.anthropic.com/privacy">Anthropic</a> · <a href="https://openai.com/privacy">OpenAI</a> · <a href="https://x.ai/legal/privacy-policy">xAI</a></li>
+      <li>AI providers: <a href="https://www.deepseek.com/privacy">DeepSeek</a> · <a href="https://www.anthropic.com/privacy">Anthropic</a> · <a href="https://openai.com/privacy">OpenAI</a> · <a href="https://x.ai/legal/privacy-policy">xAI</a> · <a href="https://policies.google.com/privacy">Google (Gemini)</a> · <a href="https://openrouter.ai/privacy">OpenRouter</a></li>
+      <li>Web search &amp; reading: <a href="https://exa.ai/">Exa</a> · <a href="https://tavily.com/">Tavily</a> · <a href="https://parallel.ai/">Parallel</a> · <a href="https://www.firecrawl.dev/">Firecrawl</a> · <a href="https://jina.ai/">Jina</a></li>
+      <li>File links: <a href="https://catbox.moe/">catbox.moe / litterbox</a> · <a href="https://temp.sh/">temp.sh</a> · <a href="https://tmpfiles.org/">tmpfiles.org</a> · <a href="https://tmpfile.link/">tmpfile.link</a> · <a href="https://x0.at/">x0.at</a></li>
+      <li>Weather: <a href="https://api.met.no/doc/TermsOfService">MET Norway</a> · Logos: <a href="https://duckduckgo.com/privacy">DuckDuckGo</a> · <a href="https://policies.google.com/privacy">Google</a> · Map tiles: <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy">OpenStreetMap Foundation</a></li>
+      <li>Your own cloud: <a href="https://www.apple.com/legal/privacy/">iCloud (Apple)</a> · <a href="https://policies.google.com/privacy">Google Drive</a></li>
     </ul>
 
-    <h2 id="ar-background">الموقع في الخلفية — فقط إذا فعّلتَ الدقة العالية</h2>
+    <h2 id="ar-background">الموقع في الخلفية - فقط إذا فعّلتَ الدقة العالية</h2>
     <p>
       إذا (وفقط إذا) فعّلتَ <strong>إشعارات الصلاة عالية الدقة</strong> من
-      الإعدادات، فسيُبقي التطبيق موقعك محدَّثًا في الخلفية —
-      <strong>حتى مع إغلاق التطبيق أو عدم استخدامه</strong> — بتحديثٍ مرة
-      يوميًا (١٢:٠١ صباحًا) وقبل كل إشعار صلاة مجدول، لغرضٍ وحيد هو بقاء
-      الأذان دقيقًا أثناء تنقلك. وفي الخلفية تُرسل إحداثياتك <strong>إلى
-      AlAdhan فقط</strong> لجلب المواقيت. ويظهر إشعارٌ دائم طوال عمل الخدمة.
-      إيقاف الخيار يوقف كل ذلك فورًا. أما بوصلة القبلة واكتشاف السفر
-      فيُحسبان على جهازك بالكامل ولا يغادرانه.
+      الإعدادات وسمحتَ للتطبيق بالوصول إلى الموقع «دائمًا»، فقد يستخدم التطبيق
+      موقعك في الخلفية، <strong>حتى مع إغلاق التطبيق أو عدم استخدامه</strong>،
+      لغرضٍ وحيد هو بقاء الأذان دقيقًا أثناء تنقلك. وعلى iPhone لا يحدث ذلك إلا
+      حين يوقظ نظام iOS التطبيق بنفسه: من حين لآخر لتجديد إشعارات الصلاة، وحين
+      تنتقل مسافة كبيرة إن فعّلتَ «تذكير دعاء السفر» أيضًا. وفي الخلفية تُرسل
+      إحداثياتك <strong>إلى AlAdhan فقط</strong> لجلب المواقيت. إيقاف الخيار
+      يوقف كل ذلك فورًا، ويمكنك تغيير إذن الموقع في أي وقت من: الإعدادات ←
+      الخصوصية والأمان ← خدمات الموقع ← أذكاري. أما بوصلة القبلة واكتشاف
+      السفر فيُحسبان على جهازك بالكامل ولا يغادرانه.
     </p>
     <p>
       وإن سحبتَ إذن الموقع من إعدادات جهازك، فسيظهر الإفصاح البارز داخل
-      التطبيق مجددًا قبل أي طلب موقعٍ جديد — في كل مرة.
+      التطبيق مجددًا قبل أي طلب موقعٍ جديد، في كل مرة.
     </p>
 
-    <h2 id="en-background">Background location — only if YOU enable High-Fidelity</h2>
+    <h2 id="ar-najiz">مساعد ناجز («أدوات الحاسوب») - ليس جهة حكومية</h2>
     <p>
-      If (and only if) you switch on <strong>High-Fidelity prayer
-      notifications</strong> in settings, the app keeps your location updated
-      in the background — <strong>even when the app is closed or not in
-      use</strong> — refreshing once daily (12:01&nbsp;AM) and before each
-      scheduled prayer notification, solely so the adhan stays accurate while
-      you move. In the background your coordinates are sent <strong>only to
-      AlAdhan</strong> to fetch prayer times. A persistent system notification
-      is shown the whole time the service runs. Turning the toggle off stops
-      all of it immediately. The qibla compass and travel detection are
-      computed entirely on your device and never leave it.
+      <strong>تطبيق اذكاري بريميوم تطبيق مستقل، وليس تابعًا لوزارة العدل ولا لمنصة ناجز ولا لنفاذ ولا لأي جهة حكومية،
+      ولا يمثّلها ولا يعمل نيابةً عنها، ولم تعتمده أيٌّ منها.</strong> خدمات ناجز ومعلوماتها مصدرها البوابة الرسمية
+      <a href="https://najiz.sa">najiz.sa</a>.
     </p>
     <p>
-      If you revoke the location permission from your device settings, the
-      app's in-app prominent disclosure is shown again before any new
-      location request — every time.
+      ميزة اختيارية: يفتح التطبيق بوابة ناجز الرسمية داخل متصفح في التطبيق، وتسجّل الدخول عبر نفاذ بنفسك، ثم يساعدك المساعد
+      على التنقل فيها خطوة خطوة. أثناء ذلك:
     </p>
+    <ul>
+      <li>تُرسَل صور صفحات البوابة، وقد تحتوي تفاصيل قضيتك، إلى مزوّد الذكاء الاصطناعي الذي اخترته وبمفتاحك أنت، ليقرر الخطوة التالية.
+        ومع DeepSeek يُرسَل نص الصفحة وصورة لها سوّد فيها التطبيق على هاتفك كل رقم من خمس خانات أو أكثر (أرقام الهوية والجوال والحسابات) وكل مستند داخل الصفحة وكل صورة كبيرة، ولا تُرسَل قيم خانات الهوية، ويذكر DeepSeek أنه يحفظ ما يصله في جمهورية الصين الشعبية.</li>
+      <li>أثناء تسجيل الدخول (نفاذ) لا يرى أي ذكاء اصطناعي شيئًا وتنتظر الجلسة، وتسجّل الدخول في صفحة البوابة بنفسك على هاتفك.</li>
+      <li>لا يُرسَل أي طلب نهائي إلى المحكمة إلا بعد تأكيدك الصريح.</li>
+      <li>سجل الجلسة (الخطوات والقرارات والإيصالات) يبقى على هاتفك، ولا يغادره إلا مع نسختك الاحتياطية «شيلبي» إن فعّلتها.</li>
+      <li>لا نملك أي خادم يرى هذه الصور أو النصوص.</li>
+    </ul>
+    <p>
+      ويمكن للمساعد بالطريقة نفسها أن يقود أي موقع آخر تطلبه؛ وكل موقع جديد يُسأل عنه أولًا، وتُرسَل صور صفحاته ونصها إلى
+      المزوّد الذي اخترته كما سبق، وتسجيل الدخول فيه بيدك أنت.
+    </p>
+
+    <h2 id="ar-drive-backup">النسخ الاحتياطي إلى iCloud أو Google Drive («شيلبي»)</h2>
+    <p>
+      يقدّم التطبيق ميزة نسخ احتياطي <strong>اختيارية بالكامل</strong>. وعلى
+      iPhone تختار مكانها بمفتاح واحد: iCloud (الافتراضي) أو Google Drive.
+      عند تفعيلها:
+    </p>
+    <ul>
+      <li>
+        <strong>ماذا يُنسَخ؟</strong> مكتبة مستنداتك المُنشأة داخل التطبيق
+        (التقارير والسير الذاتية وفهارسها)، وبموافقات منفصلة اختيارية
+        (مطفأة افتراضياً): سجل محادثات «المستشار»، ومفاتيح API التي أدخلتها،
+        و«غرفة التخصيص» (ما يحفظه المستشار عنك على جهازك)، والفيديوهات المولّدة
+        في محادثاتك (مع سجل المحادثات فقط)، و«رسائل أدوات الحاسوب» (سطورك للمساعد
+        أثناء قيادته لموقع وردوده، وقد تحمل تفاصيل قضيتك؛ وبدون هذا الخيار تُستبعَد
+        من النسخة كلها، حتى من سجل الجلسة). وما في «غرفة التخصيص» يُرسَل أيضًا
+        إلى مزوّد الذكاء الاصطناعي الذي اخترته مع كل رسالة، كتابةً أو صوتًا، ما
+        دام التخصيص مفعّلًا (وهو مطفأ افتراضياً)؛ انظر جدول الخدمات أعلاه.
+      </li>
+      <li>
+        <strong>أين تُخزَّن؟</strong> مع iCloud: ملفٌ واحد (shelby_backup.zip)
+        في مجلد «Athkar» داخل iCloud Drive <em>الخاص بك أنت</em> وبحساب Apple ID
+        نفسه، دون أي تسجيل دخول، وتراه في تطبيق «الملفات». ومع Google Drive: في
+        مجلد بيانات التطبيقات المخفي (appDataFolder) داخل حساب Google Drive
+        <em>الخاص بك أنت</em>، ولا يعمل إلا إذا سجّلت الدخول بحساب Google بنفسك
+        من داخل التطبيق، ولا يستطيع أي تطبيق آخر قراءته. للنسخ الاحتياطي إلى
+        Drive يطلب التطبيق صلاحية واحدة فقط هي نطاق <code>drive.appdata</code>
+        (ملفات التطبيق الخاصة فقط، فلا يرى التطبيق ملفاتك الأخرى في Drive). وإذا
+        اخترتَ فتح ملف من Drive داخل التطبيق، يطلب التطبيق نطاق
+        <code>drive.file</code> الذي لا يتيح له إلا الملفات التي تختارها أنت
+        بنفسك. ونحن لا نملك خادماً ولا نرى نسختك الاحتياطية إطلاقاً.
+      </li>
+      <li>
+        <strong>متى يعمل تلقائياً؟</strong> بحسب التكرار الذي تختاره،
+        والافتراضي «إيقاف». النسخ التلقائي يعمل فقط عند فتحك للتطبيق؛
+        لا يعمل أي شيء في الخلفية دون علمك.
+      </li>
+      <li>
+        <strong>ما الذي لا يُنسَخ أبداً؟</strong> حالة الاشتراك المميز
+        وعدّاد المواظبة لا يركبان أي نسخة احتياطية سحابية إطلاقاً.
+      </li>
+      <li>
+        <strong>التراجع والحذف:</strong> مع iCloud احذف الملف
+        shelby_backup.zip من تطبيق «الملفات» (iCloud Drive ← Athkar). ومع
+        Google Drive يمكنك تسجيل الخروج من داخل التطبيق في أي وقت، أو سحب
+        صلاحية التطبيق من
+        <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>،
+        أو حذف بيانات التطبيق المخفية من إعدادات Google Drive
+        (الإعدادات ← إدارة التطبيقات). النسخة الاحتياطية ملفٌ واحد متجدد
+        يُستبدل مع كل نسخ جديد.
+      </li>
+    </ul>
+    <ul>
+      <li>iCloud: <a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a> · Google Drive: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
     </ul>
 
     <h2 id="ar-purchases">المشتريات والاشتراكات</h2>
@@ -342,7 +482,7 @@
       <li>RevenueCat: <a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a></li>
     </ul>
 
-    
+
     <h2 id="ar-retention">الاحتفاظ بالبيانات وحذفها</h2>
     <p>
       لا نملك أي خادم، <strong>ولا نحتفظ بأي بيانات مستخدم لدينا إطلاقاً</strong>.
@@ -350,8 +490,8 @@
       تبقى على جهازك حتى تمسح بيانات التطبيق أو تحذفه — فتُحذف كلها فوراً.
       الإحداثيات المرسلة للخدمات المذكورة أعلاه تُستخدم للإجابة على الطلب نفسه
       فقط ولا نحتفظ بها؛ وتخضع كل خدمة لسياسة الاحتفاظ الخاصة بها. النسخة
-      الاحتياطية الاختيارية التي تبدأها بنفسك إلى Google Drive (المحادثات
-      والتقارير والسير الذاتية) تُخزَّن في حسابك أنت وتبقى حتى تحذفها بنفسك.
+      الاحتياطية الاختيارية إلى iCloud أو Google Drive، يدويةً كانت أو تلقائية
+      (انظر قسم «شيلبي» أعلاه)، تُخزَّن في حسابك أنت وتبقى حتى تحذفها بنفسك.
       <strong>إجراء الأمان:</strong> كل طلب يحمل إحداثياتك يُرسَل مشفّراً عبر HTTPS (تشفير أثناء النقل) إلى الخدمات المذكورة أعلاه، ولا يمرّ عبر أي خادم وسيط لنا ولا يُخزَّن لدينا.
     </p>
 
@@ -369,7 +509,7 @@
       <li>لمسح بيانات التطبيق: احذف التطبيق من الشاشة الرئيسية —
           يزيل نظام iOS جميع بياناته المحلية معه.</li>
       <li>لإيقاف مشاركة الموقع نهائياً: الإعدادات → الخصوصية والأمان →
-          خدمات الموقع → اذكاري بريميوم.</li>
+          خدمات الموقع → أذكاري.</li>
       <li>لإدارة اشتراكك أو إلغائه: الإعدادات → اسمك → الاشتراكات.</li>
     </ul>
 
@@ -399,13 +539,15 @@
     <a class="lang-switch" href="#ar">النسخة العربية ↑</a>
 
     <h1>Privacy Policy — Athkari Premium</h1>
-    <p class="meta">Last updated: 30 July 2026</p>
+    <p class="meta">Last updated: 18 November 2026</p>
 
     <div class="toc">
       <strong>Contents:</strong>
       <a href="#en-summary">Summary</a>
       <a href="#en-local">Data on your phone</a>
       <a href="#en-third-parties">Third-party services</a>
+      <a href="#en-najiz">The Najiz assistant</a>
+      <a href="#en-drive-backup">Backup</a>
       <a href="#en-purchases">Purchases & subscriptions</a>
       <a href="#en-retention">Data retention</a>
       <a href="#en-children">Children's privacy</a>
@@ -489,7 +631,8 @@
           <td><strong>TomTom Search</strong><br>api.tomtom.com</td>
           <td>Coordinates + search radius</td>
           <td>Primary source for nearby-mosque search (provides accurate
-              mosque names in Arabic and English)</td>
+              mosque names in Arabic and English), and a source of the district
+              and city name for the location pill</td>
         </tr>
         <tr>
           <td><strong>OpenStreetMap Overpass</strong><br>overpass-api.de</td>
@@ -501,7 +644,8 @@
           <td><strong>OpenStreetMap Nominatim</strong><br>nominatim.openstreetmap.org</td>
           <td>Coordinates</td>
           <td>Get a nearest-road / district name as a hint for mosques
-              that have no name on OpenStreetMap</td>
+              that have no name on OpenStreetMap, and a source of the district
+              and city name for the location pill</td>
         </tr>
         <tr>
           <td><strong>Masjid Near Me</strong><br>api.masjidnear.me</td>
@@ -510,20 +654,74 @@
               TomTom and OpenStreetMap return no results</td>
         </tr>
         <tr>
+          <td><strong>Apple Maps</strong><br>maps.apple.com</td>
+          <td>The destination's coordinates, or a place's name when its coordinates are not known</td>
+          <td>Opening driving directions in the Apple Maps app when you ask for directions to a mosque or a place</td>
+        </tr>
+        <tr>
           <td><strong>Google Maps</strong><br>google.com/maps</td>
-          <td>Destination coordinates + mosque name</td>
-          <td>Open driving directions inside an in-app browser when you
-              tap a mosque</td>
+          <td>A place's coordinates and name when you tap a place card the assistant shows you, or only the word "mosque" when every nearby mosque found came from Google</td>
+          <td>Opening directions or a map search in Google Maps</td>
         </tr>
         <tr>
           <td><strong>Google (Places / Routes)</strong><br>places.googleapis.com · routes.googleapis.com</td>
-          <td>Coordinates + your search text (and your route when you ask for places "on my way")</td>
-          <td>The AI assistant's nearby-places and along-route search</td>
+          <td>Coordinates + your search text or the mosque-search radius (and your route when you ask for places "on my way")</td>
+          <td>The AI assistant's nearby-places and along-route search, and an extra source for nearby mosques when the other sources return few</td>
         </tr>
         <tr>
-          <td><strong>Your chosen AI assistant provider</strong><br>DeepSeek · Anthropic (Claude) · OpenAI · xAI (Grok)</td>
+          <td><strong>Your chosen AI assistant provider</strong><br>DeepSeek · Anthropic (Claude) · OpenAI · xAI (Grok) · Google (Gemini) · OpenRouter</td>
           <td>Your city name + approximate coordinates (4-decimal, ≈11&nbsp;m) as conversation context, with your message, and any photos or documents you attach for the assistant to read</td>
           <td>Attached to every message you send the assistant while the app holds a location fix — to the one provider answering you (under your own key with BYOK)</td>
+        </tr>
+        <tr>
+          <td><strong>Your Personalisation Room - only if you turn Personalisation on</strong><br>The AI provider you chose</td>
+          <td>What the Consultant has saved about you in the Room, word for word: the things you told it (such as your name, work, family or health) and, if you chose the deeper setting, its own inferences</td>
+          <td>Sent with every message, and at the start of a voice session, to the provider answering you, so its answers fit you. Personalisation is off by default and never runs in a temporary chat; you can see, edit or wipe the Room at any time</td>
+        </tr>
+        <tr>
+          <td><strong>Voice mode (live voice conversation)</strong><br>OpenAI · xAI (Grok) · Google (Gemini Live)</td>
+          <td>Your microphone audio during a voice session you start, with the conversation's context</td>
+          <td>Talking with the assistant, to the provider you pick when the session starts, under your own key. The microphone runs only during the session and only with your permission</td>
+        </tr>
+        <tr>
+          <td><strong>Read aloud ▶️</strong><br>Google (Gemini)</td>
+          <td>The text of the message you ask to hear</td>
+          <td>Producing the spoken audio, under your own key</td>
+        </tr>
+        <tr>
+          <td><strong>Web search &amp; page reading</strong><br>Exa · Tavily · Parallel · Firecrawl · Jina Reader · the app's built-in search lines</td>
+          <td>The search phrases the assistant writes from your conversation, or the address of a page it reads</td>
+          <td>Answers grounded in fresh sources from the web</td>
+        </tr>
+        <tr>
+          <td><strong>File upload - only when you ask</strong><br>litterbox.catbox.moe · catbox.moe · temp.sh · tmpfiles.org · tmpfile.link · x0.at</td>
+          <td>The file you ask to upload</td>
+          <td>Giving you a link to the file. <strong>The link is public</strong>: anyone who has it can open it. How long it stays depends on the site: litterbox 1 hour or 72 hours, tmpfiles.org 1 hour or 48 hours, temp.sh 3 days, tmpfile.link 7 days, x0.at 3 to 100 days (smaller files longer), catbox keeps it. Before any upload the app names the file and the site and reminds you that the link is public, and nothing is sent until you agree</td>
+        </tr>
+        <tr>
+          <td><strong>Weather</strong><br>api.met.no</td>
+          <td>Coordinates (4 decimals)</td>
+          <td>Showing the weather</td>
+        </tr>
+        <tr>
+          <td><strong>OpenStreetMap map tiles</strong><br>tile.openstreetmap.org</td>
+          <td>The map squares for the area you are viewing</td>
+          <td>Drawing the mosque map</td>
+        </tr>
+        <tr>
+          <td><strong>Organisation logos in documents</strong><br>icons.duckduckgo.com · www.google.com/s2/favicons</td>
+          <td>An organisation's web domain (such as example.com) only</td>
+          <td>Fetching that organisation's logo when a document you ask for shows it (from Google when DuckDuckGo has none)</td>
+        </tr>
+        <tr>
+          <td><strong>Opening a file from Google Drive</strong><br>www.googleapis.com</td>
+          <td>The request for the file you picked, only</td>
+          <td>Opening or attaching that file in the app (see the &ldquo;Shelby&rdquo; section for the permission)</td>
+        </tr>
+        <tr>
+          <td><strong>Saving to your own cloud - only when you ask</strong><br>iCloud Drive · Google Drive (www.googleapis.com)</td>
+          <td>Only the file you ask to save</td>
+          <td>Saving a copy in the &ldquo;Athkar&rdquo; folder of your own iCloud Drive, or in an &ldquo;Athkar&rdquo; folder in your own Google Drive under the <code>drive.file</code> scope (Google asks your consent once), or putting it into a Drive file you pick yourself in Google's picker. The app sees none of your other Drive files</td>
         </tr>
       </tbody>
     </table>
@@ -537,29 +735,123 @@
       <li>TomTom: <a href="https://www.tomtom.com/privacy/">tomtom.com/privacy</a></li>
       <li>OpenStreetMap Foundation (Overpass + Nominatim): <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy">osmfoundation.org Privacy Policy</a></li>
       <li>Masjid Near Me: <a href="https://masjidnear.me/">masjidnear.me</a></li>
+      <li>Apple Maps: <a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a></li>
       <li>Google Maps: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
       <li>Google Places / Routes: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
-      <li>AI providers: <a href="https://www.deepseek.com/privacy">DeepSeek</a> · <a href="https://www.anthropic.com/privacy">Anthropic</a> · <a href="https://openai.com/privacy">OpenAI</a> · <a href="https://x.ai/legal/privacy-policy">xAI</a></li>
+      <li>AI providers: <a href="https://www.deepseek.com/privacy">DeepSeek</a> · <a href="https://www.anthropic.com/privacy">Anthropic</a> · <a href="https://openai.com/privacy">OpenAI</a> · <a href="https://x.ai/legal/privacy-policy">xAI</a> · <a href="https://policies.google.com/privacy">Google (Gemini)</a> · <a href="https://openrouter.ai/privacy">OpenRouter</a></li>
+      <li>Web search &amp; reading: <a href="https://exa.ai/">Exa</a> · <a href="https://tavily.com/">Tavily</a> · <a href="https://parallel.ai/">Parallel</a> · <a href="https://www.firecrawl.dev/">Firecrawl</a> · <a href="https://jina.ai/">Jina</a></li>
+      <li>File links: <a href="https://catbox.moe/">catbox.moe / litterbox</a> · <a href="https://temp.sh/">temp.sh</a> · <a href="https://tmpfiles.org/">tmpfiles.org</a> · <a href="https://tmpfile.link/">tmpfile.link</a> · <a href="https://x0.at/">x0.at</a></li>
+      <li>Weather: <a href="https://api.met.no/doc/TermsOfService">MET Norway</a> · Logos: <a href="https://duckduckgo.com/privacy">DuckDuckGo</a> · <a href="https://policies.google.com/privacy">Google</a> · Map tiles: <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy">OpenStreetMap Foundation</a></li>
+      <li>Your own cloud: <a href="https://www.apple.com/legal/privacy/">iCloud (Apple)</a> · <a href="https://policies.google.com/privacy">Google Drive</a></li>
     </ul>
 
-    <h2 id="en-background">Background location — only if YOU enable High-Fidelity</h2>
+    <h2 id="en-background">Background location - only if YOU enable High-Fidelity</h2>
     <p>
       If (and only if) you switch on <strong>High-Fidelity prayer
-      notifications</strong> in settings, the app keeps your location updated
-      in the background — <strong>even when the app is closed or not in
-      use</strong> — refreshing once daily (12:01&nbsp;AM) and before each
-      scheduled prayer notification, solely so the adhan stays accurate while
-      you move. In the background your coordinates are sent <strong>only to
-      AlAdhan</strong> to fetch prayer times. A persistent system notification
-      is shown the whole time the service runs. Turning the toggle off stops
-      all of it immediately. The qibla compass and travel detection are
-      computed entirely on your device and never leave it.
+      notifications</strong> in settings and allow the app &ldquo;Always&rdquo;
+      location access, the app may use your location in the background,
+      <strong>even when the app is closed or not in use</strong>, solely so the
+      adhan stays accurate while you move. On iPhone this happens only when iOS
+      itself wakes the app: from time to time to renew your prayer
+      notifications, and, if you also turn on the &ldquo;Travel-dua
+      reminder&rdquo;, when you have moved a significant distance. In the
+      background your coordinates are sent <strong>only to AlAdhan</strong> to
+      fetch prayer times. Turning the toggle off stops all of it immediately,
+      and you can change the app's location access at any time in Settings
+      &rarr; Privacy &amp; Security &rarr; Location Services &rarr; أذكاري. The qibla compass and travel detection are computed entirely on
+      your device and never leave it.
     </p>
     <p>
       If you revoke the location permission from your device settings, the
       app's in-app prominent disclosure is shown again before any new
-      location request — every time.
+      location request, every time.
     </p>
+
+    <h2 id="en-najiz">The Najiz assistant (&ldquo;Computer Tools&rdquo;) - not a government entity</h2>
+    <p>
+      <strong>Athkari Premium is an independent app. It is not affiliated with, endorsed by, or acting on behalf of the
+      Saudi Ministry of Justice, Najiz, Nafath, or any government entity.</strong> Najiz services and information come
+      from the official portal <a href="https://najiz.sa">najiz.sa</a>.
+    </p>
+    <p>
+      An optional feature: the app opens the official Najiz portal in an in-app browser, you sign in through Nafath
+      yourself, and the assistant helps you move through it step by step. While it does:
+    </p>
+    <ul>
+      <li>Screenshots of the portal's pages, which may include your case details, are sent to the AI provider you
+        chose, under your own key, so it can decide the next step. With DeepSeek the page's text is sent with a picture
+        of it in which the app, on your phone, has blacked out every number of five digits or more (identity numbers,
+        mobiles, accounts), every document inside the page and every large image; the values in identity fields are not
+        sent; DeepSeek says it stores what it receives in the People's Republic of China.</li>
+      <li>During login (Nafath) no AI sees anything and the session waits; you sign in on the portal's page yourself,
+        on your phone.</li>
+      <li>No final submission to the court is sent without your explicit confirmation.</li>
+      <li>The session's record (steps, decisions, receipts) stays on your phone and leaves it only with your own
+        &ldquo;Shelby&rdquo; backup, if you turned it on.</li>
+      <li>We run no server that sees these screenshots or texts.</li>
+    </ul>
+    <p>
+      In the same way the assistant can drive any other website you ask for; each new site asks you first, its pages'
+      screenshots and text go to the provider you chose as above, and signing in there stays in your hands.
+    </p>
+
+    <h2 id="en-drive-backup">Backup to iCloud or Google Drive (&ldquo;Shelby&rdquo;)</h2>
+    <p>
+      The app offers an <strong>entirely optional</strong> backup. On iPhone you
+      choose where it lives with one switch: iCloud (the default) or Google
+      Drive. When enabled:
+    </p>
+    <ul>
+      <li>
+        <strong>What is backed up?</strong> Your in-app document library
+        (reports, CVs and their indexes), and, behind separate opt-ins, all
+        OFF by default, your Consultant chat history, the API keys you
+        entered, your Personalisation Room (what the Consultant keeps about
+        you on your device), the videos generated in your chats (only
+        together with the chat history) and your Computer Tools talk lines
+        (your lines to the assistant while it drives a site, and its replies,
+        which may hold case details; without this switch they are left out of
+        the backup, even from the session's record). What is in the Personalisation Room
+        is also sent to the AI provider you chose with every message, typed or
+        spoken, while Personalisation is on (it is off by default); see the
+        services table above.
+      </li>
+      <li>
+        <strong>Where is it stored?</strong> With iCloud: one file
+        (shelby_backup.zip) in the &ldquo;Athkar&rdquo; folder of <em>your
+        own</em> iCloud Drive, under your Apple ID, with no sign-in; you can see
+        it in the Files app. With Google Drive: in the hidden app-data folder
+        (appDataFolder) of <em>your own</em> Google Drive account, which works
+        only if you yourself sign in with your Google account inside the app;
+        no other app can read it. For the Drive backup the app requests one
+        permission only: the <code>drive.appdata</code> scope (the app's own
+        private files only; it cannot see your other Drive files). If you
+        choose to open a file from Drive inside the app, it asks for the
+        <code>drive.file</code> scope, which reaches only the files you pick
+        yourself. We operate no server and never see your backup.
+      </li>
+      <li>
+        <strong>When does it run automatically?</strong> At the frequency you
+        choose; the default is Off. Automatic backup runs only when you
+        open the app; nothing runs in the background without you.
+      </li>
+      <li>
+        <strong>What never rides a cloud backup?</strong> Your premium
+        subscription state and your streak counter, never.
+      </li>
+      <li>
+        <strong>Revoking and deleting:</strong> with iCloud, delete the file
+        shelby_backup.zip in the Files app (iCloud Drive &rarr; Athkar). With
+        Google Drive, sign out inside the app at any time, revoke the app's
+        access at
+        <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>,
+        or delete the hidden app data from Google Drive settings
+        (Settings &rarr; Manage apps). The backup is a single rolling file,
+        replaced on every new backup.
+      </li>
+    </ul>
+    <ul>
+      <li>iCloud: <a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a> · Google Drive: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
     </ul>
 
     <h2 id="en-purchases">Purchases & subscriptions</h2>
@@ -576,7 +868,7 @@
       <li>RevenueCat: <a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a></li>
     </ul>
 
-    
+
     <h2 id="en-retention">Data retention &amp; deletion</h2>
     <p>
       We operate no server and <strong>retain no user data ourselves — none</strong>.
@@ -585,9 +877,9 @@
       uninstall it — at which point all of it is deleted immediately.
       Coordinates sent to the services listed above are used to answer that
       request only and are not retained by us; each service is governed by its
-      own retention policy. The optional backup you yourself initiate to
-      Google Drive (chats, reports, CVs) is stored in <em>your</em> Drive
-      account and remains until you delete it.
+      own retention policy. The optional backup to iCloud or Google Drive,
+      manual or automatic (see the &ldquo;Shelby&rdquo; section above), is
+      stored in <em>your own</em> account and remains until you delete it.
       <strong>Security procedure:</strong> every request that carries your coordinates is transmitted encrypted over HTTPS (encryption in transit) directly to the services listed above — it passes through no intermediary server of ours and is never stored by us.
     </p>
 
@@ -607,7 +899,7 @@
       <li>Clear app data: delete the app from your Home Screen — iOS
           removes all of its local data with it.</li>
       <li>Stop sharing location entirely: Settings → Privacy &amp; Security
-          → Location Services → Athkari Premium.</li>
+          → Location Services → أذكاري (the app's name on your iPhone).</li>
       <li>Manage or cancel your subscription: Settings → your name →
           Subscriptions.</li>
     </ul>
